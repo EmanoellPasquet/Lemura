@@ -1,24 +1,24 @@
 {
   "categorias": [
     {
-      "titulo": "Front End",
+      "titulo": "Imersão React - Alura",
       
       "videos": [
         {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+          "titulo": "Aprendendo React #FROM ZERO TO HERO! ",
+          "url": "https://www.youtube.com/watch?v=n-FKXjU9UGA&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=2&t=0s"
         },
         {
-          "titulo": "SEO com React",
-          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+          "titulo": "ImersãoReact - Alura - Aula 1",
+          "url": "https://www.youtube.com/watch?v=4XSIukvDulY&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=2&t=0s"
         },
         {
-          "titulo": "Componentização com VanillaJS #AluraMais",
-          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+          "titulo": "ImersãoReact - Alura - Aula 2",
+          "url": "https://www.youtube.com/watch?v=gKJsWIG0gAk&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=3"
         },
         {
-          "titulo": "Pare de chutar e aprenda a display: inline #01",
-          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+          "titulo": "ImersãoReact - Alura - Aula 3",
+          "url": "https://www.youtube.com/watch?v=hYfxMs1o6yw&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=3"
         },
         {
           "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "titulo": "Back End",
+      "titulo": "Imersão GameDEV JS - Alura",
       "cor": "#00C86F",
     
       "videos": [
@@ -140,10 +140,7 @@
     {
       "titulo": "Aprendendo a aprender tecnologia",
       "cor": "#6b5be2",
-      "link_extra": {
-        "text": "Curso sobre aprendizado na Alura",
-        "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
-      },
+ 
       "videos": [
         {
           "titulo": "Como estudar melhor?",

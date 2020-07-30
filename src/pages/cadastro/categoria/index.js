@@ -1,26 +1,86 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import PageDefault from '../../../componentes/PageDefault';
 
+import React, { useState } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
+import { Link } from "react-router-dom";
+import PageDefault from "../../../componentes/PageDefault";
+import FormField from "../../../componentes/FormField";
 
 function CadastroCategoria() {
-   return(
-      <PageDefault>
-         <h1>Cadastro de Categoria</h1> 
-         <form>
-            <label for="cadastro">Nome da categoria</label>
-            <input id="cadastro" type="text"/>
-            <button>Cadastrar</button>
-         </form>
+  const [categorias, setCategorias] = useState([]);
+  const valoresIniciais = {
+    //objeto de categoria com valores iniciais
+    nome: "",
+    descricao: "",
+    cor: "#000",
+  };
 
+  const [values, setValues] = useState(valoresIniciais);
 
+  function setValue(chave, valor) {
+   // chave: nome, descricao, bla, bli
+   setValues({
+     ...values,
+     [chave]: valor, // nome: 'valor'
+   })
+ }
 
-         <Link to="/">
-            Ir para Home
-         </Link>
-      </PageDefault>
-   )
-   
+ function handlerChange(infosDoEvento) {
+   setValue(
+     infosDoEvento.target.getAttribute('name'),
+     infosDoEvento.target.value
+   );
+ }
+
+  //chaves na declaração para "abrir" o valor do conteúdo
+  //[nomeDaCategoria] nome referenciado para dar à categoria
+  //setNomeDaCategoria utilizado para mudar o nome da categoria
+  //Filmes dentro do useState é o valor inicial
+
+  return (
+    <PageDefault>
+      <h1>Cadastrar nova categoria: {values.nome}</h1>
+      <form
+        onSubmit={function submitHandler(infosDoEvento) {
+          infosDoEvento.preventDefault();
+          setCategorias([
+            ...categorias, //3 pontos para para que tudo que já foi escrito seja guardado ao invés de jogar dora.
+            values,
+          ]);
+          setValues(valoresIniciais);
+        }}
+      >
+        <FormField 
+        label="Nome da Categoria"
+        type='text'
+        name='nome'
+        value={values.nome} 
+        onChange={handlerChange} 
+        />
+
+      <FormField 
+      label="Descrição"
+      type='textarea'
+        value={values.descricao} 
+        onChange={handlerChange} 
+        />
+
+      <FormField 
+      label="Cor"
+        value={values.cor} 
+        type='color'
+        onChange={handlerChange} 
+        />
+
+        <button>Cadastrar</button>
+      </form>
+      <ul>
+        {categorias.map((categoria, indice) => {
+          return <li key={`${categoria}${indice}`}>{categoria.nome}</li>;
+        })}
+      </ul>
+
+      <Link to="/">Ir para Home</Link>
+    </PageDefault>
+  );
 }
 
 export default CadastroCategoria;

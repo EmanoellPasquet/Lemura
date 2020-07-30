@@ -6,9 +6,9 @@ import PageDefault from '../../../componentes/PageDefault';
 function CadastroVideo() {
    return(
       <PageDefault>
-         <h1>Cadastro Vídeo</h1> 
+         <h1>Cadastrar novo vídeo</h1> 
          <Link to="/cadastro/categoria">
-            <h2>Cadastrar Categoria</h2>
+            <h1>Cadastrar nova categoria</h1>
          </Link>
       </PageDefault>
    )

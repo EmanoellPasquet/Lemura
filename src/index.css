@@ -1,7 +1,10 @@
+@font-face{
+    font-family:custom-devflix;
+    src: url(../src/assets/fonts/spy.ttf);
+}
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Kalam', cursive;
+    font-family: custom-devflix;
 }
 
 :root {
@@ -19,7 +22,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #262932;
+
+   background: radial-gradient(#292929,#000);
+    
  
 
 }

@@ -1,7 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React  from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
+
+
 
 const Container = styled.ul`
   padding: 0;
@@ -19,12 +20,20 @@ const Container = styled.ul`
       font-size: 30px;
     }
   }
-  
   .slick-prev {
     left: 0;
   }
   .slick-next {
     right: 16px;
+  }
+`;
+
+const SliderComponent = styled(SlickSlider)`
+  margin-bottom: 40px;
+  .slick-arrow {
+    &:before {
+      color: #62D2F0;
+    }
   }
 `;
 
@@ -38,21 +47,21 @@ export const SliderItem = styled.li`
   }
 `;
 
-
 const Slider = ({ children }) => (
   <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: false,
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-    }}
+    <SliderComponent
+      {...{
+        dots: true,
+        infinite: true,
+        speed: 300,
+        centerMode: false,
+        variableWidth: true,
+        adaptiveHeight: true,
+      }}
     >
       {children}
-    </SlickSlider>
+    </SliderComponent>
   </Container>
 );
 
-export default Slider; 
+export default Slider;

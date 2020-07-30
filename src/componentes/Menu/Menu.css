@@ -22,14 +22,13 @@
  right: 0;
  padding-left: 5%;
  padding-right: 5%;
-
- background: var(--black);
- border-bottom: 2px solid var(--primary);
+ background: linear-gradient( #000,#292929);
+ border-bottom: 5px solid #62D2F9;
 }
 body {
  --bodyPaddingTop: 94px;
  padding-top: var(--bodyPaddingTop);
- background-color: ;
+ background-color: #404040;
 }
 @media (max-width: 800px) {
  .Menu {
