@@ -12,7 +12,9 @@ function Menu() {
         <Link to="/">
           <img className="Logo" src={Logo} alt="devflix logo" />
         </Link>
-
+        <Button as={Link} className="ButtonLin" to="/test404">
+          Teste 404
+        </Button>
         <Button as={Link} className="ButtonLink" to="/cadastro/video">
           Novo vídeo
         </Button>

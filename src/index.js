@@ -5,8 +5,10 @@ import App from "./pages/Home";
 import CadastroVideo from "./pages/cadastro/video";
 import {  BrowserRouter, Switch, Route} from "react-router-dom";
 import CadastroCategoria from "./pages/cadastro/categoria";
+import Pagina404 from "./componentes/error404";
 
-const Pagina404 =()=> ( <div>Erro 404 - Página não encontrada ou inexistente</div> );
+
+
 
 ReactDOM.render(
     <BrowserRouter>

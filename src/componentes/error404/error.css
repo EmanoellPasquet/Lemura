@@ -1,0 +1,35 @@
+.base{
+   background-color: transparent;
+   width: 80%;
+   height:75vh;
+   display: flex;
+   align-self: center;
+   align-items: center;
+   padding: 50px;
+   justify-content: flex-end;
+   flex-direction: column;
+   border: 1px solid #62D2F9;
+   border-radius: 10px;
+}
+
+.ButtonError{
+   display: flex;
+   width: 155px;
+   height:55px;
+   margin: 30px 15px 0;
+   
+
+}
+.gif{
+   width: 50%;
+   height: 50%;
+}
+h2{
+   color: #62D2F9;
+   padding-top: ;
+  
+}
+p{
+   color: #62D2F9;
+   margin-bottom: 50px;
+}
