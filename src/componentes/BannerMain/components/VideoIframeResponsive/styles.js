@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
+  width:100%;
+  padding-top: 50.25%;
   border: 2px solid #62d2f9;
   border-radius: 10px;
 transition:0.3s;
@@ -24,6 +24,6 @@ export const ResponsiveIframe = styled.iframe`
   height: 100%;
   transition: 0.3s ease-in-out;
   ${VideoContainer}:hover & {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.2) rotate(3deg);
   }
 `;
