@@ -1,6 +1,6 @@
 .containerError{
    background: linear-gradient( rgba(40, 40, 40, 0.7),  rgba(00, 00, 00, 0.7));
-   width: 80%;
+   max-width: 980px;
    height:83vh;
    display: flex;
    align-self: center;
