@@ -31,7 +31,7 @@
 body {
  --bodyPaddingTop: 75px;
  padding-top: var(--bodyPaddingTop);
- background-color: #404040;
+
 }
 @media (max-width: 800px) {
  .Menu {

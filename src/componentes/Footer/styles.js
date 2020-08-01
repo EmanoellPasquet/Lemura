@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const FooterBase = styled.footer`
   display: flex;
-  align-items:center;
-
-  flex-direction:column;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
   background: linear-gradient(#000, #292929);
   border-top: 5px solid #62d2f9;
   padding-left: 16px;

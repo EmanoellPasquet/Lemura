@@ -16,11 +16,11 @@
     --white: #FFFFFF;
     --frontEnd: #6BD1FF;
     --backEnd: #00C86F;
-    color: red;
 }
 
 html,
 body {
+    color: #62D2F9;
     margin: 0;
     padding: 0;
    background: radial-gradient(#292929,#000);
@@ -34,9 +34,7 @@ a {
     min-height: calc(100vh - var(--bodyPaddingTop));
     display: flex;
     flex-direction: column;
-}
-
-Switch{
-    color:red;
+    
     
 }
+

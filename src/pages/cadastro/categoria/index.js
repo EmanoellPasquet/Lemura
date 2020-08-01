@@ -3,6 +3,8 @@ import React, { useState } from "react"; //UseState para fazer com que a SPA fun
 import { Link } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
+import Button from '../../../componentes/Button'
+
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
@@ -70,7 +72,7 @@ function CadastroCategoria() {
         onChange={handlerChange} 
         />
 
-        <button>Cadastrar</button>
+        <Button>Cadastrar</Button>
       </form>
       <ul>
         {categorias.map((categoria, indice) => {
@@ -78,7 +80,7 @@ function CadastroCategoria() {
         })}
       </ul>
 
-      <Link to="/">Ir para Home</Link>
+      <Button><Link to="/"> Voltar</Link></Button>
     </PageDefault>
   );
 }
