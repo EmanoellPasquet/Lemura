@@ -31,16 +31,20 @@ function CadastroCategoria() {
    );
  }
 
- useEffect(()=>{
-   const URL_HOME = 'http://localhost:3000/';
-    fetch(URL_HOME)
-    .then(async(respostaDoServidor) => {
-    const resposta = await respostaDoServidor.json();
-    setCategorias([
-      ...resposta,
-    ])
-    });
- },[]);
+ useEffect(() => {
+  if (window.location.href.includes('localhost')) {
+    const URL = 'http://localhost:8080/categorias';
+    fetch(URL)
+      .then(async (respostaDoServer) => {
+        if (respostaDoServer.ok) {
+          const resposta = await respostaDoServer.json();
+          setCategorias(resposta);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
+  }
+}, []);
   
 
   //chaves na declaração para "abrir" o valor do conteúdo
@@ -76,11 +80,12 @@ function CadastroCategoria() {
         onChange={handlerChange} 
         />
 
-      <FormField 
-      label="Cor"
-        value={values.cor} 
-        type='color'
-        onChange={handlerChange} 
+<FormField
+          label="Cor"
+          type="color"
+          name="cor"
+          value={values.cor}
+          onChange={handleChange}
         />
 
         <Button>Cadastrar</Button>
