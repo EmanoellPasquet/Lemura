@@ -36,6 +36,9 @@ function CadastroCategoria() {
     fetch(URL_HOME)
     .then(async(respostaDoServidor) => {
     const resposta = await respostaDoServidor.json();
+    setCategorias([
+      ...resposta,
+    ])
     });
  },[]);
   
@@ -83,9 +86,11 @@ function CadastroCategoria() {
         <Button>Cadastrar</Button>
       </form>
       <ul>
-        {categorias.map((categoria, indice) => {
-          return <li key={`${categoria}${indice}`}>{categoria.nome}</li>;
-        })}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.id}`}>
+            {categoria.titulo}
+          </li>
+        ))}
       </ul>
 
       <Button><Link to="/"> Voltar</Link></Button>
