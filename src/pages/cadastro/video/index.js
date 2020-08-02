@@ -12,10 +12,10 @@ function CadastroVideo() {
         <span className="btnVideo">
           <Button> Novo Vídeo</Button>
           </span>
-          <span className="btnCategoria"><Button>
-            <Link to="/cadastro/categoria">Nova Categoria </Link>
-          </Button>
-          </span>
+          <Link to="/cadastro/categoria"><span className="btnCategoria"><Button>
+            Nova Categoria 
+          </Button></span></Link>
+          
         </div>
       </div>
     </PageDefault>

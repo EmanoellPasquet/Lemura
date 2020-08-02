@@ -1,5 +1,4 @@
-
-import React, { useState } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
+import React, { useState, useEffect } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
 import { Link } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
@@ -12,7 +11,7 @@ function CadastroCategoria() {
     //objeto de categoria com valores iniciais
     nome: "",
     descricao: "",
-    cor: "#000",
+    cor: "",
   };
 
   const [values, setValues] = useState(valoresIniciais);
@@ -31,6 +30,15 @@ function CadastroCategoria() {
      infosDoEvento.target.value
    );
  }
+
+ useEffect(()=>{
+   const URL_HOME = 'http://localhost:3000/';
+    fetch(URL_HOME)
+    .then(async(respostaDoServidor) => {
+    const resposta = await respostaDoServidor.json();
+    });
+ },[]);
+  
 
   //chaves na declaração para "abrir" o valor do conteúdo
   //[nomeDaCategoria] nome referenciado para dar à categoria
