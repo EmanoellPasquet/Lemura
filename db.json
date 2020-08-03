@@ -2,21 +2,28 @@
    "categorias": [
       {
          "id":1,
-         "nome": "Imersão React - Alura",
+         "nome": "test 1",
           "descricao": "#",
-          "cor": "#FF0000"
+          "cor": "#"
       },
       {
          "id":2,
-         "nome": "Imersão Gamedev - Alura",
+         "nome": "test 2",
           "descricao": "#",
-          "cor": "#FF0000"
+          "cor": "#"
       },
       {
          "id":3,
-         "nome": "Imersão Gamedev - Alura",
+         "nome": "test 3",
           "descricao": "#",
-          "cor": "#FF0000"
+          "cor": "#"
+      }
+   ],
+   "videos":[
+      {
+         "id":1,
+         "nome":"test 4"
+
       }
    ]
 }

@@ -3,44 +3,26 @@ import { Link } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
+import useForm from "../../../hooks/useForms"
 
 
-function useForm(valoresIniciais){
-  const [values,setValues] = useState(valoresIniciais)
-
-}
 
 function CadastroCategoria() {
-  const [categorias, setCategorias] = useState([]);
   const valoresIniciais = {
     //objeto de categoria com valores iniciais
     nome: "",
     descricao: "",
     cor: "",
   };
-
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
   
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handlerChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute("name"),
-      infosDoEvento.target.value
-    );
-  }
+  const { handlerChange, values, clearForm } = useForm(valoresIniciais);
+  const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     if (window.location.href.includes("localhost")) {
-      const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:3001/categorias'
-      : 'https://devflixpasquet.herokuapp.com/categorias';
+      const URL = window.location.hostname.includes("localhost")
+        ? "http://localhost:3001/categorias"
+        : "https://devflixpasquet.herokuapp.com/categorias";
       fetch(URL).then(async (respostaDoServer) => {
         if (respostaDoServer.ok) {
           const resposta = await respostaDoServer.json();
@@ -67,7 +49,7 @@ function CadastroCategoria() {
             ...categorias, //3 pontos para para que tudo que já foi escrito seja guardado ao invés de jogar dora.
             values,
           ]);
-          setValues(valoresIniciais);
+          clearForm(valoresIniciais);
         }}
       >
         <FormField
