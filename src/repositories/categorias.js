@@ -1,6 +1,6 @@
 import config from "../config";
 
-const URL_CAT = `${config.URL_BACKEND}/categorias?_embed=videos`;
+const URL_CAT = `${config.URL_BACKEND}/categorias`;
 
 function getAllWithVideos() {
 return fetch(`${URL_CAT}?_embed=videos`)

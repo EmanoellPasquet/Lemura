@@ -1,37 +1,52 @@
-import React, { useEffect, useState } from "react";
-import BannerMain from "../../componentes/BannerMain";
-import Carousel from "../../componentes/Carousel";
-import categoriasRepository from "../../repositories/categorias";
-import PageDefault from "../../componentes/PageDefault/";
+import React, { useEffect, useState } from 'react';
+// import dadosIniciais from '../../data/dados_iniciais.json';
+import BannerMain from '../../componentes/BannerMain';
+import Carousel from '../../componentes/Carousel';
+import PageDefault from '../../componentes/PageDefault';
+import categoriasRepository from '../../repositories/categorias';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
   useEffect(() => {
-    categoriasRepository
-      .getAllWithVideos()
+    categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
-        console.log(categoriasComVideos);
+        console.log(categoriasComVideos[0].videos[0]);
+        setDadosIniciais(categoriasComVideos);
       })
-      .catch((e) => {});
+      .catch((err) => {
+        console.log(err.message);
+      });
   }, []);
 
-  //https://devflixpasquet.herokuapp.com/categorias?_embed=videos
   return (
     <PageDefault paddingAll={0}>
-      {dadosIniciais.length === 0 && <div>Loading . . .</div>}
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
-      {dadosIniciais.length >= 1 && (
-        <>
-          <BannerMain
-            videoTitle={dadosIniciais[0].videos[0].titulo}
-            url={dadosIniciais[0].videos[0].url}
-            videoDescription={"First video"}
+      {dadosIniciais.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div key={categoria.id}>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription={dadosIniciais[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
           />
-
-          <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
-        </>
-      )}
+        );
+      })}
       {/* {<BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
