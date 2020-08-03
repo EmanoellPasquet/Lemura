@@ -22,7 +22,7 @@
    "videos":[
       {
          "id":1,
-         "categoriaId":2,
+         "categoriaId":1,
          "nome":"test 4",
          "titulo": "test",
          "url": "url.com"
