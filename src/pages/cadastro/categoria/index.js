@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
-import useForm from "../../../hooks/useForms"
-
-
+import useForm from "../../../hooks/useForms";
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -14,25 +12,19 @@ function CadastroCategoria() {
     descricao: "",
     cor: "",
   };
-  
+
   const { handlerChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    if (window.location.href.includes("localhost")) {
-      const URL = window.location.hostname.includes("localhost")
-        ? "http://localhost:3001/categorias"
-        : "https://devflixpasquet.herokuapp.com/categorias";
-      fetch(URL).then(async (respostaDoServer) => {
-        if (respostaDoServer.ok) {
-          const resposta = await respostaDoServer.json();
-          setCategorias(resposta);
-          return;
-        }
-        throw new Error("Não foi possível pegar os dados");
-      });
-    }
-  }, []);
+    const URL = window.location.hostname.includes("localhost")
+      ? "http://localhost:3001/categorias"
+      : "https://devflixpasquet.herokuapp.com/categorias";
+    fetch(URL).then(async (respostaDoServer) => {
+      const resposta = await respostaDoServer.json();
+      setCategorias([...resposta]);
+    });
+  });
 
   //chaves na declaração para "abrir" o valor do conteúdo
   //[nomeDaCategoria] nome referenciado para dar à categoria

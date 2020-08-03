@@ -1,32 +1,185 @@
 {
    "categorias": [
-      {
-         "id":1,
-         "nome": "test 1",
-          "descricao": "#",
-          "cor": "#"
-      },
-      {
-         "id":2,
-         "nome": "test 2",
-          "descricao": "#",
-          "cor": "#"
-      },
-      {
-         "id":3,
-         "nome": "test 3",
-          "descricao": "#",
-          "cor": "#"
-      }
+     {
+       "id": 1,
+       "titulo": "Tecnologia",
+       "link_extra": {
+         "text": "Novidades sobre tecnologia no Brasil e no Mundo"
+       }
+     },
+     {
+       "id": 2,
+       "titulo": "Cultura",
+       "link_extra": {
+         "text": "História e histórias"
+       }
+     },
+     {
+       "id": 3,
+       "titulo": "Filmes"
+     },
+     {
+       "id": 4,
+       "titulo": "Games"
+     },
+     {
+       "id": 5,
+       "titulo": "Descontração"
+     }
    ],
-   "videos":[
-      {
-         "id":1,
-         "categoriaId":1,
-         "nome":"test 4",
-         "titulo": "test",
-         "url": "url.com"
-
-      }
+   "videos": [
+     {
+       "id": 1,
+       "categoriaId": 1,
+       "titulo": "NOVA TECNOLOGIA QUE VAI MUDAR O MUNDO QUE CONHECEMOS HOJE",
+       "url": "https://www.youtube.com/watch?v=spORBPLpuQ8",
+       "description": "Elon Musk anuncia Neuralink, sensores cerebrais para controlar dispositivos Elon Musk é famoso por trazer o “futurismo” para o presente. Ao lado de carros ..."
+     },
+     {
+       "id": 2,
+       "categoriaId": 1,
+       "titulo": "BRASIL tem a tecnologia mais MODERNA DO MUNDO!",
+       "url": "https://www.youtube.com/watch?v=aKAkniQ8qVU"
+     },
+     {
+       "id": 3,
+       "categoriaId": 1,
+       "titulo": "Perspectivas sobre a ciência e a tecnologia no Brasil | Carlos Henrique de Brito Cruz | TEDxUNIFESP",
+       "url": "https://www.youtube.com/watch?v=a-8Sf1hUtBk"
+     },
+     {
+       "id": 4,
+       "categoriaId": 1,
+       "titulo": "RESUMO CES 2020: NOVIDADES SOBRE O FUTURO DA TECNOLOGIA",
+       "url": "https://www.youtube.com/watch?v=bWdyXhDxFJA"
+     },
+     {
+       "id": 5,
+       "categoriaId": 1,
+       "titulo": "4 tendências de tecnologia e inovação para 2020",
+       "url": "https://www.youtube.com/watch?v=gkJ14s2LiQg"
+     },
+     {
+       "id": 6,
+       "categoriaId": 1,
+       "titulo": "Tecnologias Digitais: Oportunidades para o Novo Mundo.",
+       "url": "https://www.youtube.com/watch?v=w5EMYepKLSo"
+     },
+     {
+       "id": 7,
+       "categoriaId": 1,
+       "titulo": "Governo determina que televisores fabricados no Brasil tenham a tecnologia DTV Play",
+       "url": "https://www.youtube.com/watch?v=CAWnpy5DZbs"
+     },
+     {
+       "id": 8,
+       "categoriaId": 2,
+       "titulo": "COMO OS HIERÓGLIFOS FORAM TRADUZIDOS? - PSVVU (Ep. 03)",
+       "url": "https://www.youtube.com/watch?v=aM8kUa01Q4A",
+       "description": "INSCREVA-SE! É DE GRAÇA: https://goo.gl/5hy7QB Camisetas Coisa de Nerd: http://bit.ly/2arsmPr Siga-me no Twitter: http://twitter.com/CdNLeon Este é o ..."
+     },
+     {
+       "id": 9,
+       "categoriaId": 2,
+       "titulo": "Evolução humana | Nerdologia Ensina 12",
+       "url": "https://www.youtube.com/watch?v=Comf5vc56zc"
+     },
+     {
+       "id": 10,
+       "categoriaId": 2,
+       "titulo": "A ASCENSÃO DE THANOS: HISTÓRIA COMPLETA",
+       "url": "https://www.youtube.com/watch?v=RGZhFOIR7ss"
+     },
+     {
+       "id": 11,
+       "categoriaId": 2,
+       "titulo": "FILOSOFIA E SOCIOLOGIA -  Ep.1352",
+       "url": "https://www.youtube.com/watch?v=c9pfDBM6bic"
+     },
+     {
+       "id": 12,
+       "categoriaId": 2,
+       "titulo": "A História por trás do 11 de Setembro / Nostalgia História",
+       "url": "https://www.youtube.com/watch?v=79YrLCTa91E"
+     },
+     {
+       "id": 13,
+       "categoriaId": 3,
+       "titulo": "Live - Notícias da Semana - Filmes Injustiçados",
+       "url": "https://www.youtube.com/watch?v=hoZIMqPU47Y"
+     },
+     {
+       "id": 14,
+       "categoriaId": 3,
+       "titulo": "Filmes e Séries que entrarão na Catálogo da Netflix em Agosto",
+       "url": "https://www.youtube.com/watch?v=RQvowHXMYo0"
+     },
+     {
+       "id": 15,
+       "categoriaId": 3,
+       "titulo": "NOVO BOB ESPONJA EM 3D!! Ursos sem Cursos O FILME | Notícias Animadas",
+       "url": "https://www.youtube.com/watch?v=Hodf2TNQalM"
+     },
+     {
+       "id": 16,
+       "categoriaId": 3,
+       "titulo": "SEM FILMES!!! JOHN CENA E THE ROCK RETORNANDO? RANDY ORTON WWE CHAMPION E ADAM COLE NO MAIN ROSTER.",
+       "url": "https://www.youtube.com/watch?v=dAAW8q64Zic"
+     },
+     {
+       "id": 17,
+       "categoriaId": 4,
+       "titulo": "MEU NOVO PROGRAMA DE NOTÍCIAS DE GAMES",
+       "url": "https://www.youtube.com/watch?v=AxGTlqM5CV8",
+       "description": "Não adianta, eu gosto mesmo é fazer programa de notícias de games! E atendendo a pedidos, elas estão de volta – mas de um jeito um pouco diferente."
+     },
+     {
+       "id": 18,
+       "categoriaId": 4,
+       "titulo": "Péssimas notícias sobre o GTA 6 (Só que tem um porém)",
+       "url": "https://www.youtube.com/watch?v=n2qbJH5EqVw"
+     },
+     {
+       "id": 19,
+       "categoriaId": 4,
+       "titulo": "State of Play ESPECIAL Agosto / Começo do fim da Warner Games / Spider-man dos Vingadores EXCLUSIVO",
+       "url": "https://www.youtube.com/watch?v=Ggj7smWC_Aw"
+     },
+     {
+       "id": 20,
+       "categoriaId": 4,
+       "titulo": "Youtube muda política para monetizar videos de GAMES, FINALMENTE BOAS NOTÍCIAS",
+       "url": "https://www.youtube.com/watch?v=zwlu_CwpbUs"
+     },
+     {
+       "id": 21,
+       "categoriaId": 5,
+       "titulo": "STRANGER THINGS É NOVELA DE CRIANÇA | Choque de Cultura",
+       "url": "https://www.youtube.com/watch?v=oo8iJFaK_yM"
+     },
+     {
+       "id": 22,
+       "categoriaId": 5,
+       "titulo": "FALAÍ - Cultura Nerd",
+       "url": "https://www.youtube.com/watch?v=csFSSplK8dI"
+     },
+     {
+       "id": 23,
+       "categoriaId": 5,
+       "titulo": "Afinal, o que é ser nerd? Diego e Cris batem um papo para tentar entender esse conceito e revelam suas \"nerdices\"",
+       "url": "https://www.youtube.com/watch?v=66wrwqRIpSA"
+     },
+     {
+       "id": 24,
+       "categoriaId": 5,
+       "titulo": "Ser nerd está na moda, deixou de ser um apelido pejorativo para indicar indivíduos que possuem conhecimento específico sobre diversos assuntos da cultura ...",
+       "url": "https://www.youtube.com/watch?v=imI7rQ-CRpM"
+     },
+     {
+       "id": 24,
+       "categoriaId": 5,
+       "titulo": "Entrevista: Jovem Nerd",
+       "url": "https://www.youtube.com/watch?v=9n7mW9cylXM"
+     }
    ]
-}
+ }
