@@ -23,7 +23,9 @@
       {
          "id":1,
          "categoriaId":2,
-         "nome":"test 4"
+         "nome":"test 4",
+         "titulo": "test",
+         "url": "url.com"
 
       }
    ]
