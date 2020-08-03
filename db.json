@@ -22,6 +22,7 @@
    "videos":[
       {
          "id":1,
+         "categoriaId":2,
          "nome":"test 4"
 
       }
