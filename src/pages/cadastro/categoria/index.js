@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react"; //UseState para fazer com qu
 import { Link } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
-import Button from '../../../componentes/Button'
+import Button from "../../../componentes/Button";
 
+
+function useForm(valoresIniciais){
+  const [values,setValues] = useState(valoresIniciais)
+
+}
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
@@ -17,35 +22,35 @@ function CadastroCategoria() {
   const [values, setValues] = useState(valoresIniciais);
 
   function setValue(chave, valor) {
-   // chave: nome, descricao, bla, bli
-   setValues({
-     ...values,
-     [chave]: valor, // nome: 'valor'
-   })
- }
+  
+    setValues({
+      ...values,
+      [chave]: valor,
+    });
+  }
 
- function handlerChange(infosDoEvento) {
-   setValue(
-     infosDoEvento.target.getAttribute('name'),
-     infosDoEvento.target.value
-   );
- }
+  function handlerChange(infosDoEvento) {
+    setValue(
+      infosDoEvento.target.getAttribute("name"),
+      infosDoEvento.target.value
+    );
+  }
 
- useEffect(() => {
-  if (window.location.href.includes('localhost')) {
-    const URL = 'http://localhost:8080/categorias';
-    fetch(URL)
-      .then(async (respostaDoServer) => {
+  useEffect(() => {
+    if (window.location.href.includes("localhost")) {
+      const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:3001/categorias'
+      : 'https://devflixpasquet.herokuapp.com/categorias';
+      fetch(URL).then(async (respostaDoServer) => {
         if (respostaDoServer.ok) {
           const resposta = await respostaDoServer.json();
           setCategorias(resposta);
           return;
         }
-        throw new Error('Não foi possível pegar os dados');
+        throw new Error("Não foi possível pegar os dados");
       });
-  }
-}, []);
-  
+    }
+  }, []);
 
   //chaves na declaração para "abrir" o valor do conteúdo
   //[nomeDaCategoria] nome referenciado para dar à categoria
@@ -65,40 +70,39 @@ function CadastroCategoria() {
           setValues(valoresIniciais);
         }}
       >
-        <FormField 
-        label="Nome da Categoria"
-        type='text'
-        name='nome'
-        value={values.nome} 
-        onChange={handlerChange} 
+        <FormField
+          label="Nome da Categoria"
+          type="text"
+          name="nome"
+          value={values.nome}
+          onChange={handlerChange}
         />
 
-      <FormField 
-      label="Descrição"
-      type='textarea'
-        value={values.descricao} 
-        onChange={handlerChange} 
+        <FormField
+          label="Descrição"
+          type="textarea"
+          value={values.descricao}
+          onChange={handlerChange}
         />
 
-<FormField
+        <FormField
           label="Cor"
-          type="color"
-          name="cor"
           value={values.cor}
-          onChange={handleChange}
+          type="color"
+          onChange={handlerChange}
         />
 
         <Button>Cadastrar</Button>
       </form>
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.id}`}>
-            {categoria.titulo}
-          </li>
+          <li key={`${categoria.titulo}`}>{categoria.titulo}</li>
         ))}
       </ul>
 
-      <Button><Link to="/"> Voltar</Link></Button>
+      <Button>
+        <Link to="/"> Voltar</Link>
+      </Button>
     </PageDefault>
   );
 }
