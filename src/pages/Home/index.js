@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../componentes/BannerMain';
 import Carousel from '../../componentes/Carousel';
 import PageDefault from '../../componentes/PageDefault';
@@ -47,18 +46,7 @@ function Home() {
           />
         );
       })}
-      {/* {<BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"First video"}
-      />
-      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]} />
-
-      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[1]} />
-
-      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[2]} />
-
-      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[3]} /> */}
+      
     </PageDefault>
   );
 }

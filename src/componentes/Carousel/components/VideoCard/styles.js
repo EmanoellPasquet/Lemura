@@ -11,25 +11,25 @@ export const VideoCardContainer = styled.a`
   width: 350px;
   height: 220px;
   background-image: ${({ url }) => `url(${url})`};
-  background-size: cover;
   background-position: center;
   border-radius: 0 50px 0 50px;
+  opacity:0.7;
   position: relative;
   display: flex;
   align-items: flex-end;
   padding: 16px;
-  margin:10px 0 10px 10px;
-  transition:  .3s;
+  margin:50px 0px 50px 30px ;
+  transition:  .3s ease-in-out;
 
 
   &:hover,
   &:focus {
-    width: 500px;
-    border:2px solid #62D2F9;
-  
-  
- 
- 
+   transform:scaleX(105%) scaleY(120%);
+  border-radius: 50px 0px 50px 0px;
+  opacity:1;
+  rotate:-1deg;
+  box-shadow: 2px 2px 10px 5px #62D2F9;
+
   }
   
   &:not(:first-child) {

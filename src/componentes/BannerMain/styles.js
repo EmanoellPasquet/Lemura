@@ -19,15 +19,14 @@ ContentAreaContainer.Item = styled.div`
   width: 50%;
   display: inline-block;
   margin-bottom: 50px;
+  
   @media (max-width: 800px) {
     width: 100%;
   }
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 60px;
   line-height: 70px;
   display: flex;

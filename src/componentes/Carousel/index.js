@@ -15,7 +15,7 @@ function Carousel({
     <VideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
+          <Title style={{ backgroundColor: categoryColor || '#62D2F9' }}>
             {categoryTitle}
           </Title>
           {categoryExtraLink && 

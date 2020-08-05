@@ -3,7 +3,8 @@ import Logo from "../../assets/img/Logo.png";
 import {Link} from 'react-router-dom';
 import "./Menu.css";
 import Button from "../Button";
-//import ButtonLink from './componentes/ButtonLink';
+import { FaArrowCircleUp } from "react-icons/fa";
+
 
 function Menu() {
   return (
@@ -12,11 +13,8 @@ function Menu() {
         <Link to="/">
           <img className="Logo" src={Logo} alt="devflix logo" />
         </Link>
-        <Button as={Link} className="ButtonLin" to="/test404">
-          Teste 404
-        </Button>
         <Button as={Link} className="ButtonLink" to="/cadastro/video">
-          Novo vídeo
+          UPLOAD <FaArrowCircleUp />
         </Button>
       </nav>
     </header>
@@ -24,3 +22,4 @@ function Menu() {
 }
 
 export default Menu;
+

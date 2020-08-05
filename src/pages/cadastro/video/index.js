@@ -1,21 +1,99 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
-import "./cadastro.css";
+//import "./cadastro.css";
 import Button from "../../../componentes/Button";
+import {  FaArrowAltCircleUp } from "react-icons/fa";
+import FormField from "../../../componentes/FormField";
+import useForm from "../../../hooks/useForms";
+import videosRepository from "../../../repositories/videos";
+import categoriasRepository from "../../../repositories/categorias";
 
 function CadastroVideo() {
+  const history = useHistory();
+  const [categorias, setCategorias] = useState([]);
+  const { handlerChange, values } = useForm({
+    titulo: "",
+    url: "",
+    categoria: "",
+  });
+
+  useEffect(() => {
+    categoriasRepository
+    .getAll()
+    .then((categoriasFromServer) => {
+      setCategorias(categoriasFromServer);
+    });
+  }, []);
+  console.log(categorias);
+
   return (
     <PageDefault>
       <div className="outerContainer">
         <div className="containerCadastro">
-        <span className="btnVideo">
-          <Button> Novo Vídeo</Button>
-          </span>
-          <Link to="/cadastro/categoria"><span className="btnCategoria"><Button>
-            Nova Categoria 
-          </Button></span></Link>
-          
+          <h1>Cadastro de vídeo</h1>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+
+              const categoriaSelecionada = categorias.find((categoria) => {
+                return categoria.titulo === values.categoria;
+              });
+
+              videosRepository
+                .create({
+                  titulo: values.titulo,
+                  url: values.url,
+                  categoriaId:categoriaSelecionada.id,
+                })
+                .then(() => {
+                  console.log("Success!");
+                  history.push("/");
+                });
+            }}
+          >
+            <FormField
+              label="Título do vídeo"
+              name="titulo"
+              value={values.titulo}
+              onChange={handlerChange}
+            />
+
+            <FormField
+              label="Link do vídeo"
+              name="url"
+              value={values.url}
+              onChange={handlerChange}
+            />
+
+            <FormField
+              label="Categoria do vídeo"
+              name="categoria"
+              value={values.categoria}
+              onChange={handlerChange}
+              suggestions={
+                [
+                  'Imersão React - Alura',
+                  'Imersão GameDev - Alura',
+                  'Next Level Week Starter - RocketSeat',
+                  'Next Level Week Booster - RocketSeat',
+                  'Descontração',
+              ]
+            }
+            />
+
+            <span className="btnVideo">
+              <Button>
+                {" "}
+                UPLOAD <FaArrowAltCircleUp />
+              </Button>
+            </span>
+          </form>
+          <Link to="/cadastro/categoria">
+            <span className="btnCategoria">
+              <Button>Nova Categoria</Button>
+            </span>
+          </Link>
         </div>
       </div>
     </PageDefault>

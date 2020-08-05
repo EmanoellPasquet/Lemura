@@ -4,6 +4,7 @@ import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
+import { FaArrowCircleLeft, FaPlusCircle } from "react-icons/fa";
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -24,7 +25,7 @@ function CadastroCategoria() {
       const resposta = await respostaDoServer.json();
       setCategorias([...resposta]);
     });
-  });
+  },[]);
 
   //chaves na declaração para "abrir" o valor do conteúdo
   //[nomeDaCategoria] nome referenciado para dar à categoria
@@ -40,7 +41,7 @@ function CadastroCategoria() {
           setCategorias([
             ...categorias, //3 pontos para para que tudo que já foi escrito seja guardado ao invés de jogar dora.
             values,
-          ]);
+          ],[]);
           clearForm(valoresIniciais);
         }}
       >
@@ -66,17 +67,31 @@ function CadastroCategoria() {
           onChange={handlerChange}
         />
 
-        <Button>Cadastrar</Button>
+        {categorias.length > 0 && (
+          <div>
+            {/* Cargando... */}
+            Loading...
+          </div>
+        )}
+
+        <Link to="/">
+         
+          <Button>
+            <FaArrowCircleLeft /> Voltar
+          </Button>
+        </Link>
+
+        <Button>
+          
+          Cadastrar <FaPlusCircle />
+        </Button>
       </form>
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.titulo}`}>{categoria.titulo}</li>
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}</li>
         ))}
       </ul>
-
-      <Button>
-        <Link to="/"> Voltar</Link>
-      </Button>
     </PageDefault>
   );
 }

@@ -1,14 +1,14 @@
 .Logo {
  max-width: 168px;
 }
+.Logo:hover{
+  rotate: (360deg);
+}
 .github, .linkedin {
   margin: 15px 15px;
+  
 }
-@media (max-width: 800px) {
- .Logo {
-   max-width: 105px;
- }
-}
+
 
 .Menu {
  width: 100%;
@@ -35,8 +35,8 @@ body {
 }
 @media (max-width: 800px) {
  .Menu {
-   height: 40px;
-   justify-content: center;
+   height: 100px;
+   justify-content: space-between;
  }
  body {
    --bodyPaddingTop: 40px;
@@ -57,22 +57,17 @@ body {
  border-radius: 5px;
  text-decoration: none;
  display: inline-block;
- transition: opacity .3s;
+ transition: .3s;
 }
 .ButtonLink:hover,
 .ButtonLink:focus {
- opacity: .5;
+
 }
 
 @media (max-width: 800px) {
  a.ButtonLink {
-   position: fixed;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background: var(--primary);
-   border-radius: 0;
-   border: 0;
+  font-size: 8px;
+  width: 100px;
    text-align: center;
  }
 }

@@ -1,188 +1,200 @@
 {
-   "categorias": [
-     {
-       "id": 1,
-       "titulo": "Imersão React - Alura",
-       "link_extra": {
-         "text": "Aplicação baseada na NETFLIX utilizando REACT!"
-       }
-     },
-     {
-       "id": 2,
-       "titulo": "Imersão GameDev - Alura",
-       "link_extra": {
-         "text": "Jogo desenvolvido completamente em JavaScript"
-       }
-     },
-     {
-       "id": 3,
-       "titulo": "Next Level Week Starter - RocketSeat",
-        "link_extra": {
-         "text": "Frontend de uma aplicação para coleta de material reciclável"
-       }
-     },
-      {
-       "id": 4,
-       "titulo": "Next Level Week Booster - RocketSeat",
-        "link_extra": {
-         "text": "Backend de uma aplicação para coleta de material reciclável"
-       }
-     },
-     {
-       "id": 5,
-       "titulo": "Descontração"
-     }
-   ],
-   "videos": [
-     {
-       "id": 1,
-       "categoriaId": 1,
-       "titulo": "Vai passar o dia codando? Escolha a música certa para relaxar e bora pro código!",
-       "url": "https://www.youtube.com/watch?v=WWUoq4RtHV0"
-     },
-     {
-       "id": 2,
-       "categoriaId": 1,
-       "titulo": "Aula 1 - React Components e AluraFlix",
-       "url": "https://www.youtube.com/watch?v=4XSIukvDulY&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=3&t=6s"
-     },
-     {
-       "id": 3,
-       "categoriaId": 1,
-       "titulo": "Aula 2 - Roteamento e State",
-       "url": "https://www.youtube.com/watch?v=gKJsWIG0gAk&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=4&t=0s"
-     },
-     {
-       "id": 4,
-       "categoriaId": 1,
-       "titulo": "Aula 3 - Formulários e Componentes",
-       "url": "https://www.youtube.com/watch?v=hYfxMs1o6yw&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=5&t=4s"
-     },
-     {
-       "id": 5,
-       "categoriaId": 1,
-       "titulo": "Aula 4 - Ajax, validação e backend ",
-       "url": "https://www.youtube.com/watch?v=5vpI63SuQxU&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=6&t=0s"
-     },
-     {
-       "id": 6,
-       "categoriaId": 1,
-       "titulo": "Aula 5 - Gerenciador de Vídeos completo",
-       "url": "https://www.youtube.com/watch?v=MDK5LuSALdc&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=7&t=0s"
-     },
-     {
-       "id": 7,
-       "categoriaId": 2,
-       "titulo": "Aula 1 - Primeiras animações e trilha sonora",
-       "url": "https://youtu.be/DFLD-azYY7M"
-     },
-     {
-       "id": 8,
-       "categoriaId": 2,
-       "titulo": "Aula 2   Pulo duplo, Efeitos sonoros e Colisão",
-       "url": "https://youtu.be/qUeFqs4cgvE"
-     },
-     {
-       "id": 9,
-       "categoriaId": 2,
-       "titulo": "Aula 3 Adicionando Novos Inimigos e Pontuação",
-       "url": "https://youtu.be/tjfP0Wx0YaA"
-     },
-     {
-       "id": 10,
-       "categoriaId": 2,
-       "titulo": " Aula 4 Aprimorando a frequencia de inimigos e criando a tela inicial",
-       "url": "https://youtu.be/ZH02uvBIpP4"
-     },
-     {
-       "id": 11,
-       "categoriaId": 2,
-       "titulo": "Aula 5  Inserindo vidas, criando mapas e exportando o jogo",
-       "url": "https://youtu.be/J1jPy8Uv2VY"
-     },
-     {
-       "id": 12,
-       "categoriaId": 3,
-       "titulo": "Aula 1",
-       "url": "https://youtu.be/ePBdodZr5Rg"
-     },
-     {
-       "id": 13,
-       "categoriaId": 3,
-       "titulo": "Aula 2",
-       "url": "https://youtu.be/Am38sVlmDr0"
-     },
-     {
-       "id": 14,
-       "categoriaId": 3,
-       "titulo": "Aula 3",
-       "url": "https://youtu.be/xEb46FH5kS4"
-     },
-     {
-       "id": 15,
-       "categoriaId": 3,
-       "titulo": "Aula 4",
-       "url": "https://youtu.be/n-CqFv8Cjtc"
-     },
-     {
-       "id": 16,
-       "categoriaId": 3,
-       "titulo": "Aula 5.",
-       "url": "https://youtu.be/Fga3aP8v8RA"
-     },
-     {
-       "id": 17,
-       "categoriaId": 4,
-       "titulo": "Aula 1",
-       "url": "https://youtu.be/CHiSNqzbCSc"
-     },
-     {
-       "id": 18,
-       "categoriaId": 4,
-       "titulo": "Aula 2",
-       "url": "https://youtu.be/CHiSNqzbCSc"
-     },
-     {
-       "id": 19,
-       "categoriaId": 4,
-       "titulo": "Aula 3",
-       "url": "https://youtu.be/1i1CrVo3A7M"
-     },
-     {
-       "id": 20,
-       "categoriaId": 4,
-       "titulo": "Aula 4",
-       "url": "https://youtu.be/ox-DwzKclKk"
-     },
-     {
-       "id": 21,
-       "categoriaId": 4,
-       "titulo": "Aula 5",
-       "url": "https://youtu.be/mD7oS7QLGb0"
-     },
-     {
-       "id": 22,
-       "categoriaId": 5,
-       "titulo": "FALAÍ - Cultura Nerd",
-       "url": "https://www.youtube.com/watch?v=csFSSplK8dI"
-     },
-     {
-       "id": 23,
-       "categoriaId": 5,
-       "titulo": "Afinal, o que é ser nerd? Diego e Cris batem um papo para tentar entender esse conceito e revelam suas \"nerdices\"",
-       "url": "https://www.youtube.com/watch?v=66wrwqRIpSA"
-     },
-     {
-       "id": 24,
-       "categoriaId": 5,
-       "titulo": "Ser nerd está na moda, deixou de ser um apelido pejorativo para indicar indivíduos que possuem conhecimento específico sobre diversos assuntos da cultura ...",
-       "url": "https://www.youtube.com/watch?v=imI7rQ-CRpM"
-     },
-     {
-       "id": 24,
-       "categoriaId": 5,
-       "titulo": "Entrevista: Jovem Nerd",
-       "url": "https://www.youtube.com/watch?v=9n7mW9cylXM"
-     }
-   ]
- }
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Imersão React - Alura",
+      "link_extra": {
+        "text": "Aplicação baseada na NETFLIX utilizando REACT!"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Imersão GameDev - Alura",
+      "link_extra": {
+        "text": "Jogo desenvolvido completamente em JavaScript"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Next Level Week Starter - RocketSeat",
+      "link_extra": {
+        "text": "Frontend de uma aplicação para coleta de material reciclável"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Next Level Week Booster - RocketSeat",
+      "link_extra": {
+        "text": "Backend de uma aplicação para coleta de material reciclável"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Descontração"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Vai passar o dia codando? Escolha a música certa para relaxar e bora pro código!",
+      "url": "https://www.youtube.com/watch?v=WWUoq4RtHV0"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Aula 1 - React Components e AluraFlix",
+      "url": "https://www.youtube.com/watch?v=4XSIukvDulY&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=3&t=6s"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Aula 2 - Roteamento e State",
+      "url": "https://www.youtube.com/watch?v=gKJsWIG0gAk&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=4&t=0s"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Aula 3 - Formulários e Componentes",
+      "url": "https://www.youtube.com/watch?v=hYfxMs1o6yw&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=5&t=4s"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Aula 4 - Ajax, validação e backend ",
+      "url": "https://www.youtube.com/watch?v=5vpI63SuQxU&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=6&t=0s"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Aula 5 - Gerenciador de Vídeos completo",
+      "url": "https://www.youtube.com/watch?v=MDK5LuSALdc&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=7&t=0s"
+    },
+    {
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "Aula 1 - Primeiras animações e trilha sonora",
+      "url": "https://youtu.be/DFLD-azYY7M"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "Aula 2   Pulo duplo, Efeitos sonoros e Colisão",
+      "url": "https://youtu.be/qUeFqs4cgvE"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Aula 3 Adicionando Novos Inimigos e Pontuação",
+      "url": "https://youtu.be/tjfP0Wx0YaA"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": " Aula 4 Aprimorando a frequencia de inimigos e criando a tela inicial",
+      "url": "https://youtu.be/ZH02uvBIpP4"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "Aula 5  Inserindo vidas, criando mapas e exportando o jogo",
+      "url": "https://youtu.be/J1jPy8Uv2VY"
+    },
+    {
+      "id": 12,
+      "categoriaId": 3,
+      "titulo": "Aula 1",
+      "url": "https://youtu.be/ePBdodZr5Rg"
+    },
+    {
+      "id": 13,
+      "categoriaId": 3,
+      "titulo": "Aula 2",
+      "url": "https://youtu.be/Am38sVlmDr0"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "Aula 3",
+      "url": "https://youtu.be/xEb46FH5kS4"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "Aula 4",
+      "url": "https://youtu.be/n-CqFv8Cjtc"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "Aula 5.",
+      "url": "https://youtu.be/Fga3aP8v8RA"
+    },
+    {
+      "id": 17,
+      "categoriaId": 4,
+      "titulo": "Aula 1",
+      "url": "https://youtu.be/CHiSNqzbCSc"
+    },
+    {
+      "id": 18,
+      "categoriaId": 4,
+      "titulo": "Aula 2",
+      "url": "https://youtu.be/CHiSNqzbCSc"
+    },
+    {
+      "id": 19,
+      "categoriaId": 4,
+      "titulo": "Aula 3",
+      "url": "https://youtu.be/1i1CrVo3A7M"
+    },
+    {
+      "id": 20,
+      "categoriaId": 4,
+      "titulo": "Aula 4",
+      "url": "https://youtu.be/ox-DwzKclKk"
+    },
+    {
+      "id": 21,
+      "categoriaId": 4,
+      "titulo": "Aula 5",
+      "url": "https://youtu.be/mD7oS7QLGb0"
+    },
+    {
+      "id": 22,
+      "categoriaId": 5,
+      "titulo": "FALAÍ - Cultura Nerd",
+      "url": "https://www.youtube.com/watch?v=csFSSplK8dI"
+    },
+    {
+      "id": 23,
+      "categoriaId": 5,
+      "titulo": "Afinal, o que é ser nerd? Diego e Cris batem um papo para tentar entender esse conceito e revelam suas \"nerdices\"",
+      "url": "https://www.youtube.com/watch?v=66wrwqRIpSA"
+    },
+    {
+      "id": 24,
+      "categoriaId": 5,
+      "titulo": "Ser nerd está na moda, deixou de ser um apelido pejorativo para indicar indivíduos que possuem conhecimento específico sobre diversos assuntos da cultura ...",
+      "url": "https://www.youtube.com/watch?v=imI7rQ-CRpM"
+    },
+    {
+      "id": 24,
+      "categoriaId": 5,
+      "titulo": "Entrevista: Jovem Nerd",
+      "url": "https://www.youtube.com/watch?v=9n7mW9cylXM"
+    },
+    {
+      "id": 25,
+      "categoriaId": 5,
+      "titulo": "Spinner for React",
+      "url": "https://www.youtube.com/watch?v=T3L4zQnLrVA"
+    },
+    {
+      "titulo": "ffff",
+      "url": "dddd",
+      "categoriaId": 5,
+      "id": 26
+    }
+  ]
+}

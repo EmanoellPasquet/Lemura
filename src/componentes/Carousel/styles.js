@@ -8,23 +8,35 @@ export const Title = styled.h3`
   margin-bottom: 16px;
   display: inline-block;
   padding: 20px;
-  background: red;
+  transition:.2s ease-in-out;
   line-height: 1;
-  border-radius: 4px;
+  border-radius: 0px 20px 0px 20px;
+  &:hover{
+  border-radius:20px 0px 20px 0px;
+  box-shadow: 2px 2px 10px 5px #62D2F9;
+  &:hover{
+    color:gray;
+    
+  }
 
+  }
+ 
   @media (max-width: 800px) {
     font-size: 18px;
     padding: 10px;
   }
 `;
 
+
 export const ExtraLink = styled.a`
   margin-left: 16px;
   text-decoration: none;
-  transition: opacity .3s;
+  transition:  .3s;
+  color:#62D2F9;
   &:hover,
   &:focus {
-    opacity: .5;
+    color:gray;
+    
   }
   @media (max-width: 800px) {
     display: block;
@@ -48,8 +60,9 @@ export const VideoCardList = styled.ul`
 `;
 
 export const VideoCardGroupContainer = styled.section`
-  color: white;
+  color:#FFF;
   min-height: 197px;
   margin-left: 5%;
   margin-bottom: 16px;
+  
 `;
