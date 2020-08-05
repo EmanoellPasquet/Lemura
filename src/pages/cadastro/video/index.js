@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 //import "./cadastro.css";
 import Button from "../../../componentes/Button";
-import {  FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 import FormField from "../../../componentes/FormField";
 import useForm from "../../../hooks/useForms";
 import videosRepository from "../../../repositories/videos";
@@ -12,6 +12,7 @@ import categoriasRepository from "../../../repositories/categorias";
 function CadastroVideo() {
   const history = useHistory();
   const [categorias, setCategorias] = useState([]);
+  const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handlerChange, values } = useForm({
     titulo: "",
     url: "",
@@ -19,13 +20,11 @@ function CadastroVideo() {
   });
 
   useEffect(() => {
-    categoriasRepository
-    .getAll()
-    .then((categoriasFromServer) => {
+    categoriasRepository.getAll().then((categoriasFromServer) => {
       setCategorias(categoriasFromServer);
     });
   }, []);
-  console.log(categorias);
+  console.log(categoryTitles);
 
   return (
     <PageDefault>
@@ -44,7 +43,7 @@ function CadastroVideo() {
                 .create({
                   titulo: values.titulo,
                   url: values.url,
-                  categoriaId:categoriaSelecionada.id,
+                  categoriaId: categoriaSelecionada.id,
                 })
                 .then(() => {
                   console.log("Success!");
@@ -71,15 +70,7 @@ function CadastroVideo() {
               name="categoria"
               value={values.categoria}
               onChange={handlerChange}
-              suggestions={
-                [
-                  'Imersão React - Alura',
-                  'Imersão GameDev - Alura',
-                  'Next Level Week Starter - RocketSeat',
-                  'Next Level Week Booster - RocketSeat',
-                  'Descontração',
-              ]
-            }
+              suggestions={categoryTitles}
             />
 
             <span className="btnVideo">
