@@ -34,7 +34,6 @@ function CadastroVideo() {
           <form
             onSubmit={(event) => {
               event.preventDefault();
-
               const categoriaSelecionada = categorias.find((categoria) => {
                 return categoria.titulo === values.categoria;
               });

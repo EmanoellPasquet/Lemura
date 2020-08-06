@@ -5,12 +5,9 @@ export const FooterBase = styled.footer`
   align-items: center;
   width: 100%;
   flex-direction: column;
-  background: linear-gradient(#000, #292929);
-  border-top: 5px solid #62d2f9;
+  background:linear-gradient(#3d3d3d,#2D2D2D) ;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 20px;
   margin-top:25px;
-
 `;

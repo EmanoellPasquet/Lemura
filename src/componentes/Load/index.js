@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Logo from '../../assets/img/Load.svg';
 
 const Wrapper = styled.div`
-  width: 200px;
-  margin: 0 auto;
+width:100%;
+height:100vh;
+
 `;
 
 function Load() {

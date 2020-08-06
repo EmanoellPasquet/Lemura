@@ -75,7 +75,7 @@ const Input = styled.input`
 `;
 
 function FormField({
-  label, type, name, value, onChange, suggestions,as,
+  label, type, name, value, onChange, suggestions, as,
 }) {
   const fieldId = `id_${name}`;
 
@@ -101,7 +101,6 @@ function FormField({
         />
         <Label.Text>
           {label}
-          :
         </Label.Text>
         {
           hasSuggestions && (

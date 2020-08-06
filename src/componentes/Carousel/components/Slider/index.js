@@ -5,8 +5,33 @@ import styled from 'styled-components';
 
 
 const Container = styled.ul`
-  padding: 0 10px;
+  padding: 30px;
   margin: 0;
+.slick-list {
+    padding-left: 1%;
+    overflow: visible;
+  }
+}
+.slick-prev{
+  left: 0px;
+    height: 100%;
+    &:before {
+      transform: translate(-50%, -75%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -25%) rotate(-45deg);
+    }
+}
+.slick-next {
+    right: 0px;
+    height: 100%;
+    &:before {
+      transform: translate(-50%, -75%) rotate(-45deg);
+    }
+    &:after {
+      transform: translate(-50%, -25%) rotate(45deg);
+    }
+  }
   .slick-prev,
   .slick-next {
     z-index: 50;
@@ -15,16 +40,34 @@ const Container = styled.ul`
     margin: auto;
     width: 30px;
     height: 30px;
-    transform: initial;
-    &:before {
-      font-size: 30px;
+    transform:initial;
+    transition: all .3s;
+    
+    &:before,
+    &:after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: '';
+      background-color: #62D2F0;
+      display: block;
+      height: 3rem;
+      width: 1rem;
+      opacity: 1;
+      border-radius: 0.25rem;
+      
+    }
+    &:hover{
+      transform: scale(2);
     }
   }
   .slick-prev {
     left: 0;
+    height:100%;
   }
   .slick-next {
-    right: 16px;
+    right: 0px;
+    height: 100%;
   }
 `;
 
@@ -38,7 +81,6 @@ const SliderComponent = styled(SlickSlider)`
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 16px;
   img {
     margin: 16px;
     width: 298px;

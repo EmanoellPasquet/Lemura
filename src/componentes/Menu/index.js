@@ -9,6 +9,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 function Menu() {
   return (
     <header>
+      <div className="border-top">
       <nav className="Menu">
         <Link to="/">
           <img className="Logo" src={Logo} alt="devflix logo" />
@@ -17,6 +18,7 @@ function Menu() {
           UPLOAD <FaArrowCircleUp />
         </Button>
       </nav>
+      </div>
     </header>
   );
 }

@@ -3,32 +3,32 @@
     {
       "id": 1,
       "titulo": "Imersão React - Alura",
-        "subtitulo": "Aplicação baseada na NETFLIX utilizando REACT!",
-        "cor:":""
+      "descricao": "Aplicação baseada na NETFLIX utilizando REACT!",
+      "cor:": ""
     },
     {
       "id": 2,
       "titulo": "Imersão GameDev - Alura",
-        "subtitulo": "Jogo desenvolvido completamente em JavaScript",
-        "cor:":""
+      "text": "Jogo desenvolvido completamente em JavaScript",
+      "cor:": ""
     },
     {
       "id": 3,
       "titulo": "Next Level Week Starter - RocketSeat",
-        "subtitulo": "Frontend de uma aplicação para coleta de material reciclável",
-        "cor:":""
+      "text": "Frontend de uma aplicação para coleta de material reciclável",
+      "cor:": ""
     },
     {
       "id": 4,
       "titulo": "Next Level Week Booster - RocketSeat",
-        "subtitulo": "Backend de uma aplicação para coleta de material reciclável",
-        "cor:":""
+      "text": "Backend de uma aplicação para coleta de material reciclável",
+      "cor:": ""
     },
     {
       "id": 5,
       "titulo": "Descontração",
-      "subtitulo":"",
-      "cor:":""
+      "text": "",
+      "cor:": ""
     }
   ],
   "videos": [
@@ -187,12 +187,6 @@
       "categoriaId": 5,
       "titulo": "Spinner for React",
       "url": "https://www.youtube.com/watch?v=T3L4zQnLrVA"
-    },
-    {
-      "titulo": "aaaa",
-      "url": "aaaa",
-      "categoriaId": 1,
-      "id": 26
     }
   ]
 }

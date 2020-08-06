@@ -7,20 +7,11 @@ export const Title = styled.h3`
   line-height: 1;
   margin-bottom: 16px;
   display: inline-block;
-  padding: 20px;
-  transition:.2s ease-in-out;
+  padding: 15px;
   line-height: 1;
-  border-radius: 0px 20px 0px 20px;
-  &:hover{
-  border-radius:20px 0px 20px 0px;
-  box-shadow: 2px 2px 10px 5px #62D2F9;
-  &:hover{
-    color:gray;
-    
-    
-  }
+  border-left:10px solid #87ff00;
 
-  }
+  
  
   @media (max-width: 800px) {
     font-size: 18px;
@@ -36,7 +27,7 @@ export const ExtraLink = styled.a`
   color:#62D2F9;
   &:hover,
   &:focus {
-    color:gray;
+    color:lightgray;
     
   }
   @media (max-width: 800px) {
@@ -64,6 +55,7 @@ export const VideoCardGroupContainer = styled.section`
   color:#FFF;
   min-height: 197px;
   margin-left: 5%;
+  margin-right:5%;
   margin-bottom: 16px;
   
 `;
