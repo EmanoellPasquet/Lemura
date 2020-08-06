@@ -22,6 +22,7 @@ export const VideoCardContainer = styled.a`
   transition:  .3s ease-in-out;
 
 
+
   &:hover,
   &:focus {
    transform:scaleX(105%) scaleY(120%);

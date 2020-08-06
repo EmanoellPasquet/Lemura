@@ -3,6 +3,7 @@ import BannerMain from '../../componentes/BannerMain';
 import Carousel from '../../componentes/Carousel';
 import PageDefault from '../../componentes/PageDefault';
 import categoriasRepository from '../../repositories/categorias';
+import Load from '../../componentes/Load';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -10,7 +11,6 @@ function Home() {
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
-        console.log(categoriasComVideos[0].videos[0]);
         setDadosIniciais(categoriasComVideos);
       })
       .catch((err) => {
@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <PageDefault paddingAll={0}>
-      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+      {dadosIniciais.length === 0 && (<Load/>)}
 
       {dadosIniciais.map((categoria, indice) => {
         if (indice === 0) {

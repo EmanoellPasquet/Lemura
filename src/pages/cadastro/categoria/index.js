@@ -5,6 +5,10 @@ import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
 import { FaArrowCircleLeft, FaPlusCircle } from "react-icons/fa";
+import categoriasRepository from "../../../repositories/categorias";
+import config from '../../../config/index'
+import Load from "../../../componentes/Load";
+import Uniqid from 'uniqid';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -17,15 +21,36 @@ function CadastroCategoria() {
   const { handlerChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
 
+  function submitCategory(event) {
+    event.preventDefault();
+    categoriasRepository
+      .setNewCategory(values)
+      .then(() => {
+        setCategorias([...categorias, values]);
+        clearForm();
+      })
+      .catch((error) => {
+        window.console.warn("Tratar o erro e mostrar", error);
+      });
+  }
   useEffect(() => {
-    const URL = window.location.hostname.includes("localhost")
-      ? "http://localhost:3001/categorias"
-      : "https://devflixpasquet.herokuapp.com/categorias";
-    fetch(URL).then(async (respostaDoServer) => {
-      const resposta = await respostaDoServer.json();
-      setCategorias([...resposta]);
-    });
-  },[]);
+    window
+      .fetch(`${config.URL_BACKEND}/categorias`)
+      .then(async (respostaDoServer) => {
+        const result = await respostaDoServer.json();
+        setCategorias([...result]);
+      });
+  }, []);
+
+  // useEffect(() => {
+  //   const URL = window.location.hostname.includes("localhost")
+  //     ? "http://localhost:3001/categorias"
+  //     : "https://devflixpasquet.herokuapp.com/categorias";
+  //   fetch(URL).then(async (respostaDoServer) => {
+  //     const resposta = await respostaDoServer.json();
+  //     setCategorias([...resposta]);
+  //   });
+  // },[]);
 
   //chaves na declaração para "abrir" o valor do conteúdo
   //[nomeDaCategoria] nome referenciado para dar à categoria
@@ -34,64 +59,83 @@ function CadastroCategoria() {
 
   return (
     <PageDefault>
-      <h1>Cadastrar nova categoria: {values.nome}</h1>
-      <form
-        onSubmit={function submitHandler(infosDoEvento) {
+      <h1>Cadastrar nova categoria</h1>
+      <form onSubmit={submitCategory}
+        /*onSubmit={function submitHandler(infosDoEvento) {
           infosDoEvento.preventDefault();
-          setCategorias([
-            ...categorias, //3 pontos para para que tudo que já foi escrito seja guardado ao invés de jogar dora.
-            values,
-          ],[]);
+          setCategorias(
+            [
+              ...categorias, //3 pontos para para que tudo que já foi escrito seja guardado ao invés de jogar dora.
+              values,
+            ],
+            []
+          );
           clearForm(valoresIniciais);
-        }}
+        }}*/
       >
         <FormField
           label="Nome da Categoria"
           type="text"
-          name="nome"
-          value={values.nome}
-          onChange={handlerChange}
+          name="titulo"
+          value={values.titulo}
+          onChange={handlerChange} as="input"
         />
 
         <FormField
-          label="Descrição"
-          type="textarea"
-          value={values.descricao}
+          label="Sub-título"
+          type="text"
+          value={values.subtitulo}
           onChange={handlerChange}
+          as="input"
         />
 
         <FormField
-          label="Cor"
-          value={values.cor}
+          label="Cor da categoria"
           type="color"
+          value={values.cor}
           onChange={handlerChange}
+          as="input"
         />
-
-        {categorias.length > 0 && (
-          <div>
-            {/* Cargando... */}
-            Loading...
-          </div>
-        )}
 
         <Link to="/">
-         
           <Button>
             <FaArrowCircleLeft /> Voltar
           </Button>
         </Link>
 
-        <Button>
-          
+        <Button  type="submit">
           Cadastrar <FaPlusCircle />
         </Button>
       </form>
-      <ul>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.titulo}`}>
-            {categoria.titulo}</li>
-        ))}
-      </ul>
+      {categorias.length >= 0 && (<Load />)}
+
+<table>
+  <tbody>
+    {
+      categorias.map((item) => (
+        <tr key={Uniqid()}>
+          <td style={{ borderBottomColor: item.cor }}>
+            {item.titulo}
+          </td>
+          <td style={{ borderBottomColor: item.cor }}>
+            {item.subtitulo}
+          </td>
+          <td style={{ borderBottomColor: item.cor }}>
+            <span style={{ backgroundColor: item.cor }}>{item.cor}</span>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+  <thead>
+    <tr>
+      <th>Título:</th>
+      <th>Sub-título:</th>
+      <th>Cor:</th>
+    </tr>
+  </thead>
+</table>
+
     </PageDefault>
   );
 }

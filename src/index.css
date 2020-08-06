@@ -23,7 +23,8 @@ body {
     color: #62D2F9;
     margin: 0;
     padding: 0;
-   background: radial-gradient(#292929,#000);
+    /* background: url(./assets/img/bg.svg); */
+   background:linear-gradient( #2D2D2D,gray,#2D2D2D);
 }
 
 

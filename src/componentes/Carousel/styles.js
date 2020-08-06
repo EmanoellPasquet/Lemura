@@ -17,6 +17,7 @@ export const Title = styled.h3`
   &:hover{
     color:gray;
     
+    
   }
 
   }

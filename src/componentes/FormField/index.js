@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+import uniqid from 'uniqid';
 
 const FormFieldWrapper = styled.div`
   position: relative;
@@ -62,6 +63,7 @@ const Input = styled.input`
   ${({ value }) => {
     const hasValue = value.length > 0;
 
+
     return (
       hasValue && css`
         &:not([type="color"]) + ${Label.Text} {
@@ -73,11 +75,9 @@ const Input = styled.input`
 `;
 
 function FormField({
-  label, type, name, value, onChange, suggestions,
+  label, type, name, value, onChange, suggestions,as,
 }) {
   const fieldId = `id_${name}`;
-  const isTypeTextarea = type === 'textarea';
-  const tag = isTypeTextarea ? 'textarea' : 'input';
 
   const hasValue = Boolean(value.length);
   const hasSuggestions = Boolean(suggestions.length);
@@ -88,12 +88,13 @@ function FormField({
         htmlFor={fieldId}
       >
         <Input
-          as={tag}
+          as={as}
           id={fieldId}
           type={type}
           value={value}
           name={name}
           hasValue={hasValue}
+          required="required"
           onChange={onChange}
           autoComplete={hasSuggestions ? 'off' : 'on'}
           list={hasSuggestions ? `suggestionFor_${fieldId}` : undefined}
@@ -107,7 +108,7 @@ function FormField({
             <datalist id={`suggestionFor_${fieldId}`}>
               {
               suggestions.map((suggestion) => (
-                <option value={suggestion} key={`suggestionFor_${fieldId}_option${suggestion}`}>
+                <option key={uniqid()} value={suggestion}>
                   {suggestion}
                 </option>
               ))
