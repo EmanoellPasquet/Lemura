@@ -13,7 +13,7 @@ export const VideoCardContainer = styled.a`
     transition: transform linear .1s ;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
   }
   &:hover .titulo,
   &:focus .titulo {

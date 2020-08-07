@@ -38,7 +38,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(90deg, rgb(152, 218, 59), red, rgb(4, 60, 156));
+  background: linear-gradient(90deg, #E61624,#EF8345,#FAD445,#A6C83D,#1CA952,#8DD4F2);
 
 z-index: 101;
 }
@@ -72,10 +72,11 @@ z-index: 101;
 .ButtonLink:focus {
 
 }
-
-@media (max-width: 800px) {
- a.ButtonLink {
-  font-size: 8px;
-   text-align: center;
- }
+.text{
+  margin-right: 10px;
 }
+@media (max-width: 803px) {
+  .ButtonLink > .text{
+     display:none;
+   }
+  }

@@ -2,8 +2,8 @@ import React from "react";
 import { FooterBase } from "./styles";
 import Logo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
-import linkedin from "../../assets/img/linkedin.png";
-import github from "../../assets/img/github.png";
+import linkedin from "../../assets/img/linkedin.svg";
+import github from "../../assets/img/github.svg";
 
 function Footer() {
   return (

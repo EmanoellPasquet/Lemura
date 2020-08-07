@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import Button from "../../../componentes/Button";
-import {  FaVideo,  FaPlus } from "react-icons/fa";
-import {  RiArrowLeftSLine } from "react-icons/ri";
-
+import {  FaVideo,  FaPlus, FaArrowLeft } from "react-icons/fa";
 import FormField from "../../../componentes/FormField";
 import useForm from "../../../hooks/useForms";
 import videosRepository from "../../../repositories/videos";
@@ -83,7 +81,7 @@ function CadastroVideo() {
       <div className="btnpagcadastro">
         <Link  to ="/">
       <Button >
-            Voltar <RiArrowLeftSLine style={{verticalAlign: 'bottom'}} />
+            Voltar <FaArrowLeft style={{verticalAlign: ''}} />
           </Button>
           </Link>
       </div>

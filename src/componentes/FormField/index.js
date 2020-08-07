@@ -54,12 +54,14 @@ function FormField({
 FormField.defaultProps = {
   type: 'text',
   value: '',
+  as: 'input',
   onChange: () => {},
   suggestions: [],
 };
 
 FormField.propTypes = {
   label: PropTypes.string.isRequired,
+  as: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.string,

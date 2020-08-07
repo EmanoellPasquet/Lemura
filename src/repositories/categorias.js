@@ -2,6 +2,7 @@ import config from "../config";
 
 const URL_CAT = `${config.URL_BACKEND}/categorias`;
 
+
 function getAllWithVideos() {
   return fetch(`${URL_CAT}?_embed=videos`).then(async (respostaDoServer) => {
     if (respostaDoServer.ok) {
@@ -23,9 +24,9 @@ function getAll() {
 }
 
 function setNewCategoria(values) {
-  return window.fetch(URL_CAT, {
+  return fetch(URL_CAT, {
     method: 'POST',
-    body: window.JSON.stringify({ ...values }),
+    body: window.JSON.stringify({ titulo:values.titulo, subtitulo:values.subtitulo, cor:values.cor  }),
     headers: {
       'content-type': 'application/json',
     },

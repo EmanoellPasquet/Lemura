@@ -4,14 +4,14 @@ import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
-import { FaFolder, FaPlus } from "react-icons/fa";
+import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
 import Load from "../../../componentes/Load";
 import Uniqid from "uniqid";
 import FormStyle from "../video/styles";
 import { Title } from "../../../componentes/Carousel/styles";
-import { RiArrowLeftSLine } from "react-icons/ri";
+import TableStyle from './styles'
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -97,6 +97,7 @@ function CadastroCategoria() {
           />
 
           <FormField
+            label={`Cor ${values.cor}`}
             type="color"
             value={values.cor}
             onChange={handlerChange}
@@ -111,43 +112,40 @@ function CadastroCategoria() {
           <div className="btnpagcadastro">
             <Link to="/">
               <Button>
-                Voltar <RiArrowLeftSLine style={{ verticalAlign: "bottom" }} />
+                Voltar <FaArrowLeft style={{ verticalAlign: "bottom" }} />
               </Button>
             </Link>
           </div>
         </form>
       </FormStyle>
       {categorias.length === 0 && <Load />}
-
-      <table>
-        <tbody>
-          {categorias.map((item) => (
-            <tr key={Uniqid()}>
-              <td style={{ borderBottomColor: item.cor }}>
-                {item.titulo}
-                {/* <Button
-                  id={categorias.id}
-                  onClick={(event) => handleDelete(event)}
-                  type="button"
-                >
-                  Excluir
-                </Button> */}
-              </td>
-              <td style={{ borderBottomColor: item.cor }}>{item.subtitulo}</td>
-              <td style={{ borderBottomColor: item.cor }}>
-                <span style={{ backgroundColor: item.cor }}>{item.cor}</span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-        <thead>
+          
+ <TableStyle>
+ <thead>
           <tr>
-            <th>Título:</th>
-            <th>Sub-título:</th>
-            <th>Cor:</th>
+            <th className="titulo" >Título</th>
+            <th className="subtitulo" >Sub-título</th>
+            <th className="cor" >Cor</th>
           </tr>
         </thead>
-      </table>
+        <tbody>
+          {
+            categorias.map((item) => (
+              <tr key={Uniqid()}>
+                <td style={{ borderLeftColor: item.cor }}>
+                  {item.titulo}
+                </td>
+                <td style={{ borderLeftColor: item.cor }}>
+                  {item.subtitulo}
+                </td>
+                <td style={{ borderLeftColor: item.cor }}>
+                  <span style={{ backgroundColor: item.cor }}>{item.cor}</span>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </TableStyle>
     </PageDefault>
   );
 }
