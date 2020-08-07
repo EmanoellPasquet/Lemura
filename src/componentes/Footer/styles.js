@@ -13,6 +13,7 @@ export const FooterBase = styled.footer`
   margin-top:25px;
   z-index:200;
   bottom:1px;
+  border-top:1px solid #5B6268 ;
 `;
 
 

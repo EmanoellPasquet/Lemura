@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterBase, FooterBorder } from "./styles";
+import { FooterBase } from "./styles";
 import Logo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 import linkedin from "../../assets/img/linkedin.png";

@@ -15,7 +15,7 @@ function Menu() {
           <img className="Logo" src={Logo} alt="devflix logo" />
         </Link>
         <Button as={Link} className="ButtonLink" to="/cadastro/video">
-          UPLOAD <FaArrowCircleUp />
+          UPLOAD <FaArrowCircleUp style={{verticalAlign: 'bottom'}}/>
         </Button>
       </nav>
       </div>
