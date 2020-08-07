@@ -8,8 +8,9 @@ const Container = styled.ul`
   padding: 30px;
   margin: 0;
 .slick-list {
-    padding-left: 1%;
-    overflow: visible;
+   
+    overflow: hidden;
+    box-sizing:border-box;
   }
 }
 .slick-prev{
@@ -64,10 +65,12 @@ const Container = styled.ul`
   .slick-prev {
     left: 0;
     height:100%;
+    left:-20px;
   }
   .slick-next {
     right: 0px;
     height: 100%;
+    right:-50px;
   }
 `;
 

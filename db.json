@@ -29,6 +29,15 @@
       "titulo": "Descontração",
       "text": "",
       "cor:": ""
+    },
+    {
+      "nome": "",
+      "descricao": "",
+      "cor": "",
+      "titulo": "aaa",
+      "subtitulo": "aaa",
+      "null": "#000000",
+      "id": 6
     }
   ],
   "videos": [
@@ -187,6 +196,12 @@
       "categoriaId": 5,
       "titulo": "Spinner for React",
       "url": "https://www.youtube.com/watch?v=T3L4zQnLrVA"
+    },
+    {
+      "titulo": "aaa",
+      "url": "aaa",
+      "categoriaId": 6,
+      "id": 26
     }
   ]
 }

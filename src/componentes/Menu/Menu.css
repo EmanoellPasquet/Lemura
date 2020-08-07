@@ -19,7 +19,7 @@
  justify-content: space-between;
  align-items: center;
  position: fixed;
- top: 0;
+ top: 1px;
  left: 0;
  right: 0;
  padding-left: 5%;
@@ -33,12 +33,12 @@ body {
 
 }
 .border-top{
-  height:103px;
+  height:102px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(90deg, rgb(143, 188, 82), rgb(1, 176, 207), rgb(30, 66, 128));
+  background: linear-gradient(90deg, rgb(152, 218, 59), red, rgb(4, 60, 156));
 
 z-index: 101;
 }

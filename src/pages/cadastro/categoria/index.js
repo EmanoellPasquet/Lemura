@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
-import { Link, useHistory } from "react-router-dom";
+import { Link, /*useHistory*/ } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
@@ -20,7 +20,7 @@ function CadastroCategoria() {
 
   const { handlerChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
-  const history = useHistory();
+  //const history = useHistory();
 
   function submitCategory(event) {
     event.preventDefault();
