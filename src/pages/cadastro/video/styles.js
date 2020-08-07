@@ -9,7 +9,7 @@ align-items:center;
 
 
 
-.btnvideocadastro{
+.btnpagcadastro{
    margin-bottom:20px;
 }
 

@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
-import { Link, /*useHistory*/ } from "react-router-dom";
+import { Link /*useHistory*/ } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import Button from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
-import { FaArrowCircleLeft, FaPlusCircle } from "react-icons/fa";
+import { FaFolder, FaPlus } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
 import Load from "../../../componentes/Load";
 import Uniqid from "uniqid";
+import FormStyle from "../video/styles";
+import { Title } from "../../../componentes/Carousel/styles";
+import { RiArrowLeftSLine } from "react-icons/ri";
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -63,43 +66,57 @@ function CadastroCategoria() {
 
   return (
     <PageDefault>
-      <h1>Cadastrar nova categoria</h1>
-      <form onSubmit={submitCategory}>
-        <FormField
-          label="Nome da Categoria"
-          type="text"
-          name="titulo"
-          value={values.titulo}
-          onChange={handlerChange}
-          as="input"
+      <Title>
+        Cadastrar nova categoria
+        <FaFolder
+          style={{
+            verticalAlign: "bottom",
+            marginLeft: "20px",
+            transform: "scale(110%)",
+          }}
         />
+      </Title>
+      <FormStyle>
+        <form onSubmit={submitCategory}>
+          <FormField
+            label="Nome da Categoria"
+            type="text"
+            name="titulo"
+            value={values.titulo}
+            onChange={handlerChange}
+            as="input"
+          />
 
-        <FormField
-          label="Sub-título"
-          name="subtitulo"
-          type="text"
-          value={values.subtitulo}
-          onChange={handlerChange}
-          as="input"
-        />
+          <FormField
+            label="Sub-título"
+            name="subtitulo"
+            type="text"
+            value={values.subtitulo}
+            onChange={handlerChange}
+            as="input"
+          />
 
-        <FormField
-          type="color"
-          value={values.cor}
-          onChange={handlerChange}
-          as="input"
-        />
+          <FormField
+            type="color"
+            value={values.cor}
+            onChange={handlerChange}
+            as="input"
+          />
 
-        <Link to="/">
-          <Button>
-            <FaArrowCircleLeft /> Voltar
-          </Button>
-        </Link>
-
-        <Button type="submit">
-          Cadastrar <FaPlusCircle />
-        </Button>
-      </form>
+          <div>
+            <Button type="submit" className="btnpagcadastro">
+              Cadastrar <FaPlus />
+            </Button>
+          </div>
+          <div className="btnpagcadastro">
+            <Link to="/">
+              <Button>
+                Voltar <RiArrowLeftSLine style={{ verticalAlign: "bottom" }} />
+              </Button>
+            </Link>
+          </div>
+        </form>
+      </FormStyle>
       {categorias.length === 0 && <Load />}
 
       <table>

@@ -76,7 +76,6 @@ z-index: 101;
 @media (max-width: 800px) {
  a.ButtonLink {
   font-size: 8px;
-  width: 100px;
    text-align: center;
  }
 }

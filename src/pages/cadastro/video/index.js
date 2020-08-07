@@ -75,20 +75,20 @@ function CadastroVideo() {
             onChange={handlerChange}
             suggestions={categoryTitles}
           />
-        </form>
-
       <div>
-      <Button className="btnvideocadastro">
+      <Button type="sumbit" className="btnpagcadastro">
             Cadastrar <FaPlus style={{verticalAlign: 'bottom'}} />
           </Button>
       </div>
-      <div className="bottombtn">
+      <div className="btnpagcadastro">
         <Link  to ="/">
       <Button >
             Voltar <RiArrowLeftSLine style={{verticalAlign: 'bottom'}} />
           </Button>
           </Link>
       </div>
+        </form>
+
   
       </FormStyle>
     </PageDefault>
