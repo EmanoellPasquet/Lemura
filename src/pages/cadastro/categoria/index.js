@@ -43,7 +43,7 @@ function CadastroCategoria() {
     const id = event.target.getAttribute("id");
     const URL_VALUE = window.location.hostname.includes("localhost")
       ? "http://localhost:3001/categorias"
-      : "https://devflix.herokuapp.com/categorias";
+      : "https://devflixpasquet.herokuapp.com/categorias";
     fetch(`${URL_VALUE}/${id}`, {
       method: "DELETE",
     })
