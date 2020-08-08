@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; //UseState para fazer com que a SPA funcione na alteração de elementos
-import { Link /*useHistory*/ } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import { Button, DeleteButton } from "../../../componentes/Button";
@@ -7,7 +7,7 @@ import useForm from "../../../hooks/useForms";
 import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
-import Load from "../../../componentes/Load";
+import LoadSecond from "../../../componentes/Load/LoadSecondary";
 import Uniqid from "uniqid";
 import FormStyle from "../video/styles";
 import { Title } from "../../../componentes/Carousel/styles";
@@ -23,7 +23,7 @@ function CadastroCategoria() {
 
   const { handlerChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
-  //const history = useHistory();
+  const history = useHistory();
 
   function submitCategory(event) {
     event.preventDefault();
@@ -46,10 +46,16 @@ function CadastroCategoria() {
       : "https://devflixpasquet.herokuapp.com/categorias";
     fetch(`${URL_VALUE}/${id}`, {
       method: "DELETE",
+      
     })
       .then((response) => response.json())
       .then((respostaDoServer) => {
-        setCategorias((prev) => prev.filter((cat) => cat.id === Number(id)));
+        setCategorias((prev) => prev.filter((cat) => cat.id !== Number(id)));
+        
+        return  (
+          history.push('/cadastro/categoria')
+        )
+       
       });
   };
 
@@ -115,7 +121,7 @@ function CadastroCategoria() {
           </div>
         </form>
       </FormStyle>
-      {categorias.length === 0 && <Load />}
+      {categorias.length === 0 && <LoadSecond />}
 
       <TableStyle>
         <thead>
@@ -131,11 +137,11 @@ function CadastroCategoria() {
               <td style={{ borderLeftColor: item.cor }}>{item.titulo}</td>
               <td style={{ borderLeftColor: item.cor }}>{item.subtitulo}</td>
               <td>
-                <DeleteButton
+                <DeleteButton as=""
                   id={item.id}
-                  onClick={(event) => handleDelete(event)}
-                  type="button"
-                >
+                  onClick={(event) =>handleDelete(event)} 
+                  type="button">
+                
                   Excluir
                 </DeleteButton>
               </td>
