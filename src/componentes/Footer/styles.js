@@ -14,6 +14,10 @@ export const FooterBase = styled.footer`
   z-index: 200;
   bottom: 1px;
   border-top: 1px solid #5b6268;
+  @media (max-width:600px){
+    flex-direction:column;
+    height:auto;
+  }
 
   .github,
   .linkedin {

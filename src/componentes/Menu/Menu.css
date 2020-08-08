@@ -4,8 +4,8 @@
 }
 .Logo:hover{
   transform: scale(105%);
-
 }
+
 .github, .linkedin {
   margin: 15px 15px;
 }
@@ -39,7 +39,6 @@ body {
   left: 0;
   right: 0;
   background: linear-gradient(90deg, #E61624,#EF8345,#FAD445,#A6C83D,#1CA952,#8DD4F2);
-
 z-index: 101;
 }
 @media (max-width: 800px) {
@@ -47,6 +46,12 @@ z-index: 101;
    height: 100px;
    justify-content: space-between;
  }
+ @media(max-width:500px){
+   .Menu{
+     justify-content: center;
+   }
+
+   }
  body {
    --bodyPaddingTop: 40px;
    padding-top: var(--bodyPaddingTop);
@@ -54,23 +59,26 @@ z-index: 101;
 }
 
 .ButtonLink {
- color: var(--white);
- border: 1px solid var(--white);
- box-sizing: border-box;
- cursor: pointer;
- padding: 16px 24px;
- font-style: normal;
- font-weight: bold;
- font-size: 16px;
- outline: none;
- border-radius: 5px;
- text-decoration: none;
- display: inline-block;
- transition: .3s;
+  color: var(--white);
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
 }
 .ButtonLink:hover,
 .ButtonLink:focus {
 
+}
+.ButtonMenu{
+  
 }
 .text{
   margin-right: 10px;
@@ -78,5 +86,23 @@ z-index: 101;
 @media (max-width: 803px) {
   .ButtonLink > .text{
      display:none;
+
    }
-  }
+   @media (max-width: 500px){
+    .ButtonLink{
+    }
+   }
+   @media(max-width:500px){
+     .ButtonMenu{
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       top:75vh;
+       left:75%;
+       
+       justify-content: space-around;
+       height: 150px;
+
+     }
+   }
+}

@@ -92,21 +92,25 @@ export const SliderItem = styled.li`
   }
 `;
 
+
 const Slider = ({ children }) => (
+  
   <Container>
     <SliderComponent
       {...{
         dots: true,
         infinite: true,
         speed: 300,
-        centerMode: false,
+        centerMode: true,
         variableWidth: true,
         adaptiveHeight: true,
       }}
+      
     >
       {children}
     </SliderComponent>
   </Container>
+  
 );
 
 export default Slider;

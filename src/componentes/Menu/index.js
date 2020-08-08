@@ -14,7 +14,7 @@ function Menu() {
         <Link to="/">
           <img className="Logo" src={Logo} alt="devflix logo" />
         </Link>
-        <div>
+        <div className="ButtonMenu">
         <Button as={Link} className="ButtonLink" to="/cadastro/categoria">
         <span className="text">Categoria</span><FaFolderPlus className="icon" style={{verticalAlign: 'bottom'}}   />
         </Button>
