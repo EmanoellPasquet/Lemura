@@ -52,7 +52,7 @@ export const VideoCardGroupContainer = styled.section`
   margin-left: 3%;
   margin-right:3%;
   margin-bottom: 0;
-  background:red;
+
 
   /* padding: 20px 40px;  */
 
