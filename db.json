@@ -2,155 +2,295 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Imersão React - Alura",
-      "descricao": "Aplicação baseada na NETFLIX utilizando REACT!",
-      "cor:": "purple"
+      "titulo": "Alien",
+      "cor": "purple",
+      "subtitulo": "A xeno-what?",
+      "url": "https://pt.wikipedia.org/wiki/Xenomorfo"
     },
     {
       "id": 2,
-      "titulo": "Imersão GameDev - Alura",
-      "text": "Jogo desenvolvido completamente em JavaScript",
-      "cor:": "red"
+      "titulo": "O horror veio do espaço",
+      "cor": "#00C86F",
+      "subtitulo": "Sempre vem coisa de lá!",
+      "url": "https://screenrant.com/best-horror-outer-space-movies/"
     },
     {
       "id": 3,
-      "titulo": "Next Level Week Starter - RocketSeat",
-      "text": "Frontend de uma aplicação para coleta de material reciclável",
-      "cor:": "white"
+      "titulo": "Zumbis",
+      "cor": "#9cd33b",
+      "subtitulo": "Um sub-gênero muito apreciado... não!",
+      "url": "https://en.wikipedia.org/wiki/List_of_zombie_films"
     },
     {
       "id": 4,
-      "titulo": "Next Level Week Booster - RocketSeat",
-      "text": "Backend de uma aplicação para coleta de material reciclável",
-      "cor:": "orange"
+      "titulo": "Outros filmes de ficção",
+      "cor": "orange",
+      "subtitulo": "Tem pra todo gosto",
+      "url": "https://en.wikipedia.org/wiki/Science_fiction_film"
+    },
+    {
+      "id": 5,
+      "titulo": "Games",
+      "cor": "red",
+      "subtitulo": "Jogos sobre e fora do tema",
+      "url": "https://pt.wikipedia.org/wiki/Jogo_eletr%C3%B4nico"
+    },
+    {
+      "id": 6,
+      "titulo": "Documentários",
+      "cor": "#d01b6c",
+      "subtitulo": "Docs sobre o tema e além",
+      "url": "http://www.google.com"
+    },
+    {
+      "id": 7,
+      "titulo": "Humor",
+      "cor": "#20bc32",
+      "subtitulo": "Humor na ficção científica",
+      "url": "https://www.cirandacultural.com.br/categorias/ficb-b-o-geral/ficcao-cientifica---humor"
+    },
+    {
+      "titulo": "qqq",
+      "subtitulo": "qqq",
+      "cor": "",
+      "id": 8
     }
   ],
   "videos": [
     {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "Vai passar o dia codando? Escolha a música certa para relaxar e bora pro código!",
-      "url": "https://www.youtube.com/watch?v=PNhQakLdI9o"
+      "titulo": "Game over man, game over! #aliens",
+      "url": "https://www.youtube.com/watch?v=bTCaVjQ8nU4",
+      "descricao": "Aliens, O Resgate arrecadou $180 milhões em todo o mundo. Foi indicado para sete prêmios da Academia , incluindo um de Melhor Atriz para Sigourney Weaver, ganhando ambos de Efeitos Sonoros e Efeitos Visuais. Ele ganhou oito Saturn Awards, incluindo Melhor Filme de Ficção Científica, Melhor Atriz para Weaver, e Melhor Direção e Melhor Escrita para Cameron."
     },
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "Aula 1 - React Components e AluraFlix",
-      "url": "https://www.youtube.com/watch?v=4XSIukvDulY&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=3&t=6s"
+      "titulo": "No espaço ninguém pode ouvir você gritar",
+      "url": "https://www.youtube.com/watch?v=DGAHtWV7Ua8"
     },
     {
       "id": 3,
       "categoriaId": 1,
-      "titulo": "Aula 2 - Roteamento e State",
-      "url": "https://www.youtube.com/watch?v=gKJsWIG0gAk&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=4&t=0s"
+      "titulo": "Só presta a Assembly edition...",
+      "url": "https://www.youtube.com/watch?v=KUTaNMJJBa8"
     },
     {
       "id": 4,
       "categoriaId": 1,
-      "titulo": "Aula 3 - Formulários e Componentes",
-      "url": "https://www.youtube.com/watch?v=hYfxMs1o6yw&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=5&t=4s"
+      "titulo": "Are you seeeing this?!",
+      "url": "https://www.youtube.com/watch?v=34cEo0VhfGE"
     },
     {
       "id": 5,
       "categoriaId": 1,
-      "titulo": "Aula 4 - Ajax, validação e backend ",
-      "url": "https://www.youtube.com/watch?v=5vpI63SuQxU&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=6&t=0s"
+      "titulo": "Puxa, tem que se esforçar pra ver esse.",
+      "url": "https://www.youtube.com/watch?v=svnAD0TApb8"
     },
     {
       "id": 6,
       "categoriaId": 1,
-      "titulo": "Aula 5 - Gerenciador de Vídeos completo",
-      "url": "https://www.youtube.com/watch?v=MDK5LuSALdc&list=PLTLJts6LySRryVQe6FaX9UlT_nosl8fRk&index=7&t=0s"
-    },
-    {
-      "id": 7,
-      "categoriaId": 2,
-      "titulo": "Aula 1 - Primeiras animações e trilha sonora",
-      "url": "https://youtu.be/DFLD-azYY7M"
+      "titulo": "Mas oi?!",
+      "url": "https://www.youtube.com/watch?v=-qJjiq72WOo"
     },
     {
       "id": 8,
       "categoriaId": 2,
-      "titulo": "Aula 2   Pulo duplo, Efeitos sonoros e Colisão",
-      "url": "https://youtu.be/qUeFqs4cgvE"
+      "titulo": "The Thing",
+      "url": "https://www.youtube.com/watch?v=5ftmr17M-a4"
     },
     {
       "id": 9,
       "categoriaId": 2,
-      "titulo": "Aula 3 Adicionando Novos Inimigos e Pontuação",
-      "url": "https://youtu.be/tjfP0Wx0YaA"
+      "titulo": "Pandorum",
+      "url": "https://www.youtube.com/watch?v=aLO5OACiXNg"
     },
     {
       "id": 10,
       "categoriaId": 2,
-      "titulo": " Aula 4 Aprimorando a frequencia de inimigos e criando a tela inicial",
-      "url": "https://youtu.be/ZH02uvBIpP4"
+      "titulo": "Event Horizon",
+      "url": "https://www.youtube.com/watch?v=THxBHDsgTDw"
     },
     {
       "id": 11,
       "categoriaId": 2,
-      "titulo": "Aula 5  Inserindo vidas, criando mapas e exportando o jogo",
-      "url": "https://youtu.be/J1jPy8Uv2VY"
+      "titulo": "Life force",
+      "url": "https://www.youtube.com/watch?v=MOF0Ov8isvI"
     },
     {
       "id": 12,
-      "categoriaId": 3,
-      "titulo": "Aula 1",
-      "url": "https://youtu.be/ePBdodZr5Rg"
+      "categoriaId": 2,
+      "titulo": "LIFE",
+      "url": "https://www.youtube.com/watch?v=cuA-xqBw4jE"
     },
     {
       "id": 13,
       "categoriaId": 3,
-      "titulo": "Aula 2",
-      "url": "https://youtu.be/Am38sVlmDr0"
+      "titulo": "Dawn of the dead",
+      "url": "https://www.youtube.com/watch?v=DV8mJcuYVaA"
     },
     {
       "id": 14,
       "categoriaId": 3,
-      "titulo": "Aula 3",
-      "url": "https://youtu.be/xEb46FH5kS4"
+      "titulo": "Return of the living dead",
+      "url": "https://www.youtube.com/watch?v=KeSAFGWzft8"
     },
     {
       "id": 15,
       "categoriaId": 3,
-      "titulo": "Aula 4",
-      "url": "https://youtu.be/n-CqFv8Cjtc"
+      "titulo": "Day of the dead",
+      "url": "https://www.youtube.com/watch?v=COj7ro8AjT8"
     },
     {
       "id": 16,
       "categoriaId": 3,
-      "titulo": "Aula 5.",
-      "url": "https://youtu.be/Fga3aP8v8RA"
+      "titulo": "Zombi 2",
+      "url": "https://www.youtube.com/watch?v=AREh0eea5RM"
+    },
+    {
+      "id": 161,
+      "categoriaId": 3,
+      "titulo": "Night of the dead(1990)",
+      "url": "https://www.youtube.com/watch?v=vFcraq44t_M"
     },
     {
       "id": 17,
       "categoriaId": 4,
-      "titulo": "Aula 1",
-      "url": "https://youtu.be/CHiSNqzbCSc"
+      "titulo": "Predator",
+      "url": "https://www.youtube.com/watch?v=X2hBYGwKh3I"
     },
     {
       "id": 18,
       "categoriaId": 4,
-      "titulo": "Aula 2",
-      "url": "https://youtu.be/CHiSNqzbCSc"
+      "titulo": "Mad Max 2",
+      "url": "https://www.youtube.com/watch?v=UlwtiOyaoo0"
     },
     {
       "id": 19,
       "categoriaId": 4,
-      "titulo": "Aula 3",
-      "url": "https://youtu.be/1i1CrVo3A7M"
+      "titulo": "Avatar",
+      "url": "https://www.youtube.com/watch?v=5PSNL1qE6VY"
     },
     {
       "id": 20,
       "categoriaId": 4,
-      "titulo": "Aula 4",
-      "url": "https://youtu.be/ox-DwzKclKk"
+      "titulo": "Splice",
+      "url": "https://www.youtube.com/watch?v=8pIeSYhipUs"
     },
     {
       "id": 21,
       "categoriaId": 4,
-      "titulo": "Aula 5",
-      "url": "https://youtu.be/mD7oS7QLGb0"
+      "titulo": "Slither",
+      "url": "https://www.youtube.com/watch?v=2-f8wU6Fpeo"
+    },
+    {
+      "id": 22,
+      "categoriaId": 5,
+      "titulo": "Dead Space",
+      "url": "https://www.youtube.com/watch?v=hMlUsGSALyY"
+    },
+    {
+      "id": 23,
+      "categoriaId": 5,
+      "titulo": "Escape from Butcher`s Bay",
+      "url": "https://www.youtube.com/watch?v=WktQZap_iiE"
+    },
+    {
+      "id": 24,
+      "categoriaId": 5,
+      "titulo": "Amnesia: The dark descent",
+      "url": "https://www.youtube.com/watch?v=mAgyxK_r2eM"
+    },
+    {
+      "id": 25,
+      "categoriaId": 5,
+      "titulo": "SOMA",
+      "url": "https://www.youtube.com/watch?v=BZTfi1jv-EE"
+    },
+    {
+      "id": 26,
+      "categoriaId": 5,
+      "titulo": "Resident Evil 8",
+      "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "titulo": "Hooks e validação",
+      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
+      "categoriaId": 1,
+      "id": 162
+    },
+    {
+      "titulo": "Titulo de teste3",
+      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
+      "categoriaId": 1,
+      "id": 163
+    },
+    {
+      "titulo": "Titulo de teste2",
+      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
+      "categoriaId": 3,
+      "id": 164
+    },
+    {
+      "titulo": "A ciência por trás da ficção",
+      "url": "https://www.youtube.com/watch?v=S0nA2GfCQhQ",
+      "categoriaId": 6,
+      "id": 165
+    },
+    {
+      "titulo": "O caso Roswell",
+      "url": "https://www.youtube.com/watch?v=KLbTJmgUqyo",
+      "categoriaId": 6,
+      "id": 166
+    },
+    {
+      "titulo": "Casa do futuro",
+      "url": "https://www.youtube.com/watch?v=Aqz7SFb7Aik",
+      "categoriaId": 6,
+      "id": 167
+    },
+    {
+      "titulo": "Outro título",
+      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
+      "categoriaId": 4,
+      "id": 168
+    },
+    {
+      "titulo": "Spaceballs",
+      "url": "https://www.youtube.com/watch?v=kGIM_yNzeUo",
+      "categoriaId": 7,
+      "id": 169
+    },
+    {
+      "titulo": "Galaxy Quest",
+      "url": "https://www.youtube.com/watch?v=B34jbC43XzA",
+      "categoriaId": 7,
+      "id": 170
+    },
+    {
+      "titulo": "Não entre em pânico!",
+      "url": "https://www.youtube.com/watch?v=MbGNcoB2Y4I",
+      "categoriaId": 7,
+      "id": 171
+    },
+    {
+      "titulo": "Olha o panda de lixo!",
+      "url": "https://www.youtube.com/watch?v=d96cjJhvlMA",
+      "categoriaId": 7,
+      "id": 172
+    },
+    {
+      "titulo": "Eles estão sempre envolvidos...",
+      "url": "https://www.youtube.com/watch?v=Z8MruXQI874",
+      "categoriaId": 6,
+      "id": 173
+    },
+    {
+      "titulo": "Masjestic 12 #topSecret",
+      "url": "https://www.youtube.com/watch?v=0vFHIz_yDE8",
+      "categoriaId": 6,
+      "id": 174
     }
   ]
 }

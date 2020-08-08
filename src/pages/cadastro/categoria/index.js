@@ -100,12 +100,12 @@ function CadastroCategoria() {
             as="input"
           />
 
-          <FormField
+          {/* <FormField
             label={`Cor ${values.cor}`}
             type="color"
             value={values.cor}
             onChange={handlerChange}
-          />
+          /> */}
 
           <div>
             <Button type="submit" className="btnpagcadastro">
