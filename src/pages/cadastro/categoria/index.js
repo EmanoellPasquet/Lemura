@@ -7,7 +7,7 @@ import useForm from "../../../hooks/useForms";
 import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
-import LoadSecond from "../../../componentes/Load/LoadSecondary";
+import Load from "../../../componentes/Load";
 import Uniqid from "uniqid";
 import FormStyle from "../video/styles";
 import { Title } from "../../../componentes/Carousel/styles";
@@ -121,7 +121,7 @@ function CadastroCategoria() {
           </div>
         </form>
       </FormStyle>
-      {categorias.length === 0 && <LoadSecond />}
+      {categorias.length === 0 && <Load />}
 
       <TableStyle>
         <thead>

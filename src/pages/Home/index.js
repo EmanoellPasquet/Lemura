@@ -3,7 +3,7 @@ import BannerMain from '../../componentes/BannerMain';
 import Carousel from '../../componentes/Carousel';
 import PageDefault from '../../componentes/PageDefault';
 import categoriasRepository from '../../repositories/categorias';
-import LoadMain from '../../componentes/Load';
+import LoadSecond from '../../componentes/Load/LoadSecondary/index';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <PageDefault paddingAll={0}>
-      {dadosIniciais.length === 0 && (<LoadMain/>)}
+      {dadosIniciais.length === 0 && (<LoadSecond/>)}
 
       {dadosIniciais.map((categoria, indice) => {
         if (indice === 0) {

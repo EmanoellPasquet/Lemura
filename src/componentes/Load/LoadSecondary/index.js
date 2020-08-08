@@ -5,8 +5,9 @@ import Logo from '../../../assets/img/Load2.svg';
 
 
 const Wrapper = styled.div`
-width:100%;
-height:100vh;
+display:flex;
+justify-content:center;
+height:80vh;
 
 `;
 
