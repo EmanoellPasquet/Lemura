@@ -2,6 +2,12 @@
  max-width: 168px;
  transition: .3s;
 }
+@media(max-width:800px){
+  .Logo{
+    max-width: 130px;
+  }
+}
+
 .Logo:hover{
   transform: scale(105%);
 }
@@ -28,10 +34,10 @@
 
 }
 body {
- --bodyPaddingTop: 75px;
- padding-top: var(--bodyPaddingTop);
-
+  --bodyPaddingTop: 94px;
+  padding-top: var(--bodyPaddingTop);
 }
+
 .border-top{
   height:102px;
   position: fixed;
@@ -40,10 +46,17 @@ body {
   right: 0;
   background: linear-gradient(90deg, #E61624,#EF8345,#FAD445,#A6C83D,#1CA952,#8DD4F2);
 z-index: 101;
+
 }
+@media(max-width:800px){
+  .border-top{
+    height:42px;
+  }
+}
+
 @media (max-width: 800px) {
  .Menu {
-   height: 100px;
+   height: 40px;
    justify-content: space-between;
  }
  @media(max-width:500px){
@@ -52,6 +65,7 @@ z-index: 101;
    }
 
    }
+   
  body {
    --bodyPaddingTop: 40px;
    padding-top: var(--bodyPaddingTop);
@@ -73,13 +87,8 @@ z-index: 101;
   text-decoration: none;
   transition: .3s;
 }
-.ButtonLink:hover,
-.ButtonLink:focus {
 
-}
-.ButtonMenu{
-  
-}
+
 .text{
   margin-right: 10px;
 }
@@ -88,20 +97,22 @@ z-index: 101;
      display:none;
 
    }
-   @media (max-width: 500px){
+   @media (max-width: 800px){
     .ButtonLink{
+      transform:scale(55%);
     }
    }
    @media(max-width:500px){
      .ButtonMenu{
+       transform: scale(150%);
        display: flex;
-       flex-direction: column;
-       position: absolute;
+       flex-direction: column-reverse;
+       position: fixed;
        top:60vh;
        left:75%;
-       
+       z-index: 50;
        justify-content: space-around;
-       height: 150px;
+       height: 100px;
 
      }
    }

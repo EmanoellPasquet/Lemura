@@ -13,6 +13,7 @@ const Container = styled.ul`
     box-sizing:border-box;
   }
 }
+
 .slick-prev{
   left: 0px;
     height: 100%;
@@ -65,12 +66,19 @@ const Container = styled.ul`
   .slick-prev {
     left: 0;
     height:100%;
-    left:-20px;
+    left:-50px;
+    @media (max-width: 500px) {
+      visibility: hidden;
+    }
   }
+ 
   .slick-next {
     right: 0px;
     height: 100%;
     right:-50px;
+    @media (max-width: 500px) {
+      visibility: hidden;
+    }
   }
 `;
 

@@ -31,8 +31,9 @@ export const VideoCardContainer = styled.a`
   }
 
   @media (max-width: 500px) {
-    width: 150px;
-    height: 200px;
+    width: 300px;
+    
+   
   }
 
   &:not(:first-child) {

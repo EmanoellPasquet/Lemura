@@ -11,6 +11,7 @@ align-items:center;
 
 .btnpagcadastro{
    margin-bottom:20px;
+   background-color:;
 }
 
 

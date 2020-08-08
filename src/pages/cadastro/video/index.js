@@ -80,8 +80,8 @@ function CadastroVideo() {
       </div>
       <div className="btnpagcadastro">
         <Link  to ="/">
-      <Button >
-            Voltar <FaArrowLeft style={{verticalAlign: ''}} />
+      <Button  >
+            Voltar <FaArrowLeft style={{verticalAlign: 'bottom'}} />
           </Button>
           </Link>
       </div>

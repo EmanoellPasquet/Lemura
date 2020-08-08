@@ -40,9 +40,8 @@ export const VideoCardList = styled.ul`
   padding-bottom: 32px;
   list-style: none;
   display: flex;
-  overflow-x: auto;
   flex-direction: row;
-  
+
   li {
     margin-right: 16px;
   }
@@ -51,13 +50,14 @@ export const VideoCardList = styled.ul`
 export const VideoCardGroupContainer = styled.section`
   color:#FFF;
   min-height: 197px;
-  margin-left: 5%;
-  margin-right:5%;
-  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right:0;
+  margin-bottom: 0;
+
   /* padding: 20px 40px;  */
 
-  @media (max-width: 800px) {
-		padding: 20px 10px;
+  @media (max-width: 500px) {
+		margin:0;
 		min-height: 165px;
 	}
   

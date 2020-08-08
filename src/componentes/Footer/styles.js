@@ -11,7 +11,6 @@ export const FooterBase = styled.footer`
   padding-right: 16px;
   padding-top: 20px;
   margin-top: 25px;
-  z-index: 200;
   bottom: 1px;
   border-top: 1px solid #5b6268;
   @media (max-width:600px){

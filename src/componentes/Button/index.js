@@ -16,7 +16,7 @@ display:flex;
  display: inline-block;
  transition:  .2s;
  margin-left:15px;
- background-color:transparent;
+ background-color:#5d5d5d;
  @media(max-width:500px){
 
  }
