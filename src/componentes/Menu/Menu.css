@@ -107,11 +107,12 @@ z-index: 101;
        transform: scale(150%);
        display: flex;
        flex-direction: column-reverse;
-       position: fixed;
+       position: absolute;
        top:60vh;
        left:75%;
        z-index: 50;
        justify-content: space-around;
+       opacity: 0.8;
        height: 100px;
 
      }
