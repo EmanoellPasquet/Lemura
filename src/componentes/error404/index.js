@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import {Button} from "../Button";
 import notFound from "../../assets/img/notFound.gif";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import "./error.css";

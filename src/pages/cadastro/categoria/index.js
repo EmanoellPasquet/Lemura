@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"; //UseState para fazer com qu
 import { Link /*useHistory*/ } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
-import Button from "../../../componentes/Button";
+import { Button, DeleteButton } from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
 import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
@@ -11,7 +11,7 @@ import Load from "../../../componentes/Load";
 import Uniqid from "uniqid";
 import FormStyle from "../video/styles";
 import { Title } from "../../../componentes/Carousel/styles";
-import TableStyle from './styles'
+import TableStyle from "./styles";
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -39,21 +39,19 @@ function CadastroCategoria() {
       });
   }
 
-  // const handleDelete = (event) => {
-  //   const id = event.target.getAttribute("id");
-
-  //   const URL_VALUE = window.location.hostname.includes("localhost")
-  //     ? "http://localhost:3001/categorias"
-  //     : "https://rangoflix.herokuapp.com/categorias";
-
-  //   fetch(`${URL_VALUE}/${id}`, {
-  //     method: "DELETE",
-  //   })
-  //     .then((response) => response.json())
-  //     .then((responseServer) => {
-  //       setCategorias((prev) => prev.filter((cat) => cat.id !== Number(id)));
-  //     });
-  // };
+  const handleDelete = (event) => {
+    const id = event.target.getAttribute("id");
+    const URL_VALUE = window.location.hostname.includes("localhost")
+      ? "http://localhost:3001/categorias"
+      : "https://devflix.herokuapp.com/categorias";
+    fetch(`${URL_VALUE}/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((respostaDoServer) => {
+        setCategorias((prev) => prev.filter((cat) => cat.id === Number(id)));
+      });
+  };
 
   useEffect(() => {
     window
@@ -101,7 +99,6 @@ function CadastroCategoria() {
             type="color"
             value={values.cor}
             onChange={handlerChange}
-            as="input"
           />
 
           <div>
@@ -119,31 +116,31 @@ function CadastroCategoria() {
         </form>
       </FormStyle>
       {categorias.length === 0 && <Load />}
-          
- <TableStyle>
- <thead>
+
+      <TableStyle>
+        <thead>
           <tr>
-            <th className="titulo" >Título</th>
-            <th className="subtitulo" >Sub-título</th>
-            <th className="cor" >Cor</th>
+            <th className="titulo">Título</th>
+            <th className="subtitulo">Sub-título</th>
+            <th className="cor"></th>
           </tr>
         </thead>
         <tbody>
-          {
-            categorias.map((item) => (
-              <tr key={Uniqid()}>
-                <td style={{ borderLeftColor: item.cor }}>
-                  {item.titulo}
-                </td>
-                <td style={{ borderLeftColor: item.cor }}>
-                  {item.subtitulo}
-                </td>
-                <td style={{ borderLeftColor: item.cor }}>
-                  <span style={{ backgroundColor: item.cor }}>{item.cor}</span>
-                </td>
-              </tr>
-            ))
-          }
+          {categorias.map((item) => (
+            <tr key={Uniqid()}>
+              <td style={{ borderLeftColor: item.cor }}>{item.titulo}</td>
+              <td style={{ borderLeftColor: item.cor }}>{item.subtitulo}</td>
+              <td>
+                <DeleteButton
+                  id={item.id}
+                  onClick={(event) => handleDelete(event)}
+                  type="button"
+                >
+                  Excluir
+                </DeleteButton>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </TableStyle>
     </PageDefault>

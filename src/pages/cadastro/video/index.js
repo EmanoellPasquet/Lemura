@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import PageDefault from "../../../componentes/PageDefault";
-import Button from "../../../componentes/Button";
+import {Button} from "../../../componentes/Button";
 import {  FaVideo,  FaPlus, FaArrowLeft } from "react-icons/fa";
 import FormField from "../../../componentes/FormField";
 import useForm from "../../../hooks/useForms";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+export const Button = styled.button`
 display:flex;
  color: #62D2F9;
  border: 1px solid #62D2F9;
@@ -20,13 +20,26 @@ display:flex;
  @media(max-width:500px){
 
  }
-
-
 &:hover,
 &:focus {
 background-color: #2C3440;
 transform:scale(.99);
-}`;
+}
+`;
 
+export const DeleteButton = styled(Button)`
+display:flex;
+width:100px;
+align-items:center;
+height:20px;
+color:white;
+background-color:#5d5d5d;
+border:1px solid snow;
+border-radius:5px;
+transition:.3s ease-in-out;
+&:focus,
+&:hover{
+ transform:scale(102%);
+}
+`;
 
-export default Button;
