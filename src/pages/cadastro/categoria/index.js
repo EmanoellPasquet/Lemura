@@ -135,8 +135,8 @@ function CadastroCategoria() {
         <tbody>
           {categorias.map((item) => (
             <tr key={Uniqid()}>
-              <td style={{ borderBottomColor: item.cor }}>{item.titulo}</td>
-              <td style={{ borderBottomColor: item.cor }}>{item.subtitulo}</td>
+              <td style={{ borderBottomColor: item.cor, color:item.cor }}>{item.titulo}</td>
+              <td style={{ borderBottomColor: item.cor,color:item.cor }}>{item.subtitulo}</td>
               <td style={{ borderBottomColor: item.cor }}>
                 <DeleteButton style={{ backgroundColor: item.cor }}
                   id={item.id}
