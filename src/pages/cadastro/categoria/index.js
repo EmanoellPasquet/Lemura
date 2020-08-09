@@ -4,7 +4,7 @@ import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import { Button, DeleteButton } from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
-import { FaFolder, FaRegTrashAlt,FaPlus, FaArrowLeft } from "react-icons/fa";
+import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
 import Load from "../../../componentes/Load";

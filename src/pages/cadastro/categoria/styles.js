@@ -24,8 +24,7 @@ th{
    padding-left:10px;
 }
 .delete{
-   width:10%;
-   text-align:left;
+   width:3%;
    padding-left:10px;
 }
 

@@ -29,9 +29,9 @@ transform:scale(.99);
 
 export const DeleteButton = styled(Button)`
 display:flex;
-width:auto;
+width:60px;
 padding:13px;
-
+justify-content:center;
 padding:0;
 height:30px;
 color:white;
