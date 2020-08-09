@@ -20,7 +20,7 @@ export const FooterBase = styled.footer`
 
   .github,
   .linkedin {
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
   }
   .github:hover,
   .linkedin:hover {

@@ -41,22 +41,30 @@ export const VideoCardContainer = styled.a`
   }
   .titulo {
     display: flex;
-    background: rgba(0, 0, 0, 0.8);
+    background:transparent;
     width: 100%;
     text-align: center;
     height: 60px;
+    font-size:22px;
+    font-weight:bold;
     color: snow;
-    padding: 10px;
-    transform: translateY(92px);
-    transition: transform linear 0.1s;
+    line-height:22px;
+    transform: translateY(-130px);
+    transition: transform linear 0.3s;
+    transition-property: all;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity:0;
+
   }
   &:hover .titulo,
   &:focus .titulo {
     transform: translateY(0);
     border-radius: 0px 0 20px 0px;
+    background:rgba(0, 0, 0, 0.8);
+       filter:alpha(opacity=100);
+      -moz-opacity:1;
+ 
     opacity: 1;
   }
   @media (max-width: 500px) {

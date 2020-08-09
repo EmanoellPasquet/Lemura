@@ -1,6 +1,7 @@
 .Logo {
  max-width: 168px;
- transition: .3s;
+ -moz-transition: all .6s ease; 
+ -webkit-transition: all .6s ease;  
 }
 @media(max-width:800px){
   .Logo{
