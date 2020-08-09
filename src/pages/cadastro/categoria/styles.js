@@ -23,7 +23,7 @@ th{
    text-align:left;
    padding-left:10px;
 }
-.cor{
+.delete{
    width:10%;
    text-align:left;
    padding-left:10px;

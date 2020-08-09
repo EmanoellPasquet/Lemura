@@ -67,3 +67,40 @@ export const VideoCardContainer = styled.a`
     }
   }
 `;
+
+
+
+
+
+export const VideoCardContainerPreview = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid;
+  background:transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  flex: 0 0 298px;
+  width: 298px;
+  height: 197px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  outline: 0;
+`;
+export const ResponsiveIframe = styled.iframe`
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  left: 200px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+`;

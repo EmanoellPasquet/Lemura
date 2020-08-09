@@ -16,10 +16,10 @@ function Menu() {
         </Link>
         <div className="ButtonMenu">
         <Button as={Link} className="ButtonLink" to="/cadastro/categoria">
-        <span className="text">Categoria</span><FaFolderPlus className="icon" style={{verticalAlign: 'bottom'}}   />
+        <span className="text">Categoria</span><FaFolderPlus className="icon" style={{verticalAlign: 'middle'}}   />
         </Button>
         <Button as={Link} className="ButtonLink" to="/cadastro/video">
-       <span className="text">Video</span>    <FaVideo className="icon" style={{verticalAlign: 'bottom'}}   />
+       <span className="text">Video</span>    <FaVideo className="icon" style={{verticalAlign: 'middle'}}   />
         </Button>
         </div>
       </nav>

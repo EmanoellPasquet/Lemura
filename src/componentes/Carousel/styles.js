@@ -8,6 +8,7 @@ export const Title = styled.h3`
   display: inline-block;
   padding: 15px;
   border-left:10px solid #62D2F9;
+  
 
 
   @media (max-width: 803px) {
@@ -21,10 +22,9 @@ export const Title = styled.h3`
    margin-left: 16px;
    text-decoration: none;
    transition:  .3s;
-   color:#62D2F9;
    &:hover,
    &:focus {
-     color:lightgray;
+    opacity: .5;
   
    }
    @media (max-width: 800px) {
@@ -48,17 +48,12 @@ export const VideoCardList = styled.ul`
 `;
 
 export const VideoCardGroupContainer = styled.section`
+  color: white;
   min-height: 197px;
-  margin-left: 3%;
-  margin-right:3%;
-  margin-bottom: 0;
-
-
-  /* padding: 20px 40px;  */
-
-  @media (max-width: 500px) {
-		margin:0;
-		min-height: 165px;
-	}
-  
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0 5%;
+  @media (max-width: 800px) {
+    margin: 0 1%;
+  }
 `;

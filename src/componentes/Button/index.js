@@ -29,17 +29,20 @@ transform:scale(.99);
 
 export const DeleteButton = styled(Button)`
 display:flex;
-width:100px;
-align-items:center;
-height:20px;
+width:auto;
+padding:13px;
+
+padding:0;
+height:30px;
 color:white;
 background-color:#5d5d5d;
 border:1px solid snow;
 border-radius:5px;
-transition:.3s ease-in-out;
+transition:.3s ease-out;
 &:focus,
 &:hover{
- transform:scale(102%);
+ transform:scale(115%);
+ opacity:0.8;
 }
 `;
 

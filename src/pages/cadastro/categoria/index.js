@@ -4,7 +4,7 @@ import PageDefault from "../../../componentes/PageDefault";
 import FormField from "../../../componentes/FormField";
 import { Button, DeleteButton } from "../../../componentes/Button";
 import useForm from "../../../hooks/useForms";
-import { FaFolder, FaPlus, FaArrowLeft } from "react-icons/fa";
+import { FaFolder, FaRegTrashAlt,FaPlus, FaArrowLeft } from "react-icons/fa";
 import categoriasRepository from "../../../repositories/categorias";
 import config from "../../../config/index";
 import Load from "../../../componentes/Load";
@@ -21,7 +21,7 @@ function CadastroCategoria() {
     cor: "",
   };
 
-  const { handlerChange, values, clearForm } = useForm(valoresIniciais);
+  const { values,  handlerChange,clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
   const history = useHistory();
 
@@ -74,7 +74,7 @@ function CadastroCategoria() {
         Cadastrar nova categoria
         <FaFolder
           style={{
-            verticalAlign: "bottom",
+            verticalAlign: "middle",
             marginLeft: "20px",
             transform: "scale(110%)",
           }}
@@ -100,22 +100,23 @@ function CadastroCategoria() {
             as="input"
           />
 
-          {/* <FormField
-            label={`Cor ${values.cor}`}
+          <FormField
+            label="Cor"
             type="color"
+            name="cor"
             value={values.cor}
             onChange={handlerChange}
-          /> */}
+          />
 
           <div>
             <Button type="submit" className="btnpagcadastro">
-              Cadastrar <FaPlus />
+              Cadastrar <FaPlus style={{ verticalAlign: "middle" }}/>
             </Button>
           </div>
           <div className="btnpagcadastro">
             <Link to="/">
               <Button>
-                Voltar <FaArrowLeft style={{ verticalAlign: "bottom" }} />
+                Voltar <FaArrowLeft style={{ verticalAlign: "middle" }} />
               </Button>
             </Link>
           </div>
@@ -128,20 +129,19 @@ function CadastroCategoria() {
           <tr>
             <th className="titulo">Título</th>
             <th className="subtitulo">Sub-título</th>
-            <th className="cor"></th>
+            <th className="delete"></th>
           </tr>
         </thead>
         <tbody>
           {categorias.map((item) => (
             <tr key={Uniqid()}>
-              <td style={{ borderLeftColor: item.cor }}>{item.titulo}</td>
-              <td style={{ borderLeftColor: item.cor }}>{item.subtitulo}</td>
-              <td>
-                <DeleteButton as=""
+              <td style={{ borderBottomColor: item.cor }}>{item.titulo}</td>
+              <td style={{ borderBottomColor: item.cor }}>{item.subtitulo}</td>
+              <td style={{ borderBottomColor: item.cor }}>
+                <DeleteButton style={{ backgroundColor: item.cor }}
                   id={item.id}
                   onClick={(event) =>handleDelete(event)} 
                   type="button">
-                
                   Excluir
                 </DeleteButton>
               </td>

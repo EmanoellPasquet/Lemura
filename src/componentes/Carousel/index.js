@@ -1,8 +1,7 @@
 import React from 'react';
-import { VideoCardGroupContainer, ExtraLink, Title } from './styles';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
-import Slider, { SliderItem } from './components/Slider';
-
+import Slider, { SliderItem } from './components/Slider'
 
 function Carousel({
   ignoreFirstVideo,
@@ -10,23 +9,25 @@ function Carousel({
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
-  const categoryExtraLink = category.descricao;
+  const categoryExtraLink = category.subtitulo;
+  const categoryUrl = category.url;
   const videos = category.videos;
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
-        <>
-          <Title style={{ borderLeftColor: categoryColor || '#transparent' }}>
+        <div>
+          <Title style={{ borderLeftColor: categoryColor } || 'red'}>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && 
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}  
+          {
+            categoryExtraLink &&
+            <ExtraLink href={categoryUrl} target="_blank">
+              {categoryExtraLink}
             </ExtraLink>
           }
-        </>
+        </div>
       )}
-      <Slider>
+      <Slider categoryColor={categoryColor}>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;

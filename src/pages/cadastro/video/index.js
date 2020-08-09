@@ -31,7 +31,7 @@ function CadastroVideo() {
 
   return (
     <PageDefault>
-      <Title>Cadastro de vídeo <FaVideo style={{verticalAlign: 'bottom', marginLeft:'10px', transform:'scale(110%)'}}/></Title>
+      <Title>Cadastro de vídeo <FaVideo style={{verticalAlign: 'middle', marginLeft:'10px', transform:'scale(110%)'}}/></Title>
       <FormStyle>
         <form
           onSubmit={(event) => {
@@ -75,13 +75,13 @@ function CadastroVideo() {
           />
       <div>
       <Button type="sumbit" className="btnpagcadastro">
-            Cadastrar <FaPlus style={{verticalAlign: 'bottom'}} />
+            Cadastrar <FaPlus style={{verticalAlign: 'middle'}} />
           </Button>
       </div>
       <div className="btnpagcadastro">
         <Link  to ="/">
       <Button  >
-            Voltar <FaArrowLeft style={{verticalAlign: 'bottom'}} />
+            Voltar <FaArrowLeft style={{verticalAlign: 'middle'}} />
           </Button>
           </Link>
       </div>

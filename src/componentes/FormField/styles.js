@@ -5,9 +5,36 @@ export const FormFieldWrapper = styled.div`
   textarea {
     min-height: 150px;
   }
-  input[type="color"] {
-    padding-left: 56px;
-  }
+
+  input[type='color'] {
+    width: 100px;
+    height: 100px; 
+    border:none;
+    margin-left:30%;
+    box-sizing:border-box;
+}
+input[type='color']::-moz-color-swatch{
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+input[type='color']::-moz-color-swatch-wrapper{
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
 `;
 
 export const Label = styled.label``;
