@@ -12,10 +12,12 @@
   <br><br>
 </p>
  
-![Front-Page da aplicação] (./src/assets/img/img4.png)
-![Front-Page da aplicação] (./src/assets/img/img1.png)
-![Página de cadastro de categorias] (./src/assets/img/img2.png)
-![Página de cadastro de vídeos] (./src/assets/img/img3.png)
+ An App inspired on Netflix for study purposes based on Imersão React da [Alura](https://www.alura.com.br/)
+![Front-Page da aplicação](./src/assets/img/img4.png)
+![Front-Page da aplicação](./src/assets/img/img1.png)
+![Página de cadastro de categorias](./src/assets/img/img2.png)
+![Página de cadastro de vídeos](./src/assets/img/img3.png)
+
 
 # Index
 
@@ -53,7 +55,7 @@
   
 ## Contribuindo
 
-1. For this repository (<https://github.com/EmanoellPasquet/Lemura/fork>)
+1. Fork this repository (<https://github.com/EmanoellPasquet/Lemura/fork>)
 2. Create a new branch for the feature (`git checkout -b feature/fooBar`)
 3. Commit the changes (`git commit -am 'Add some fooBar'`)
 4. Push it to Github (`git push origin feature/fooBar`)
