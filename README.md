@@ -12,10 +12,15 @@
   <br><br>
 </p>
  
- An App inspired on Netflix for study purposes based on Imersão React da [Alura](https://www.alura.com.br/)
+ <p align="center">An App inspired on Netflix for study purposes based on Imersão React da [Alura](https://www.alura.com.br/)</p>
+ 
+ 
 ![Front-Page da aplicação](./src/assets/img/img4.png)
+
 ![Front-Page da aplicação](./src/assets/img/img1.png)
+
 ![Página de cadastro de categorias](./src/assets/img/img2.png)
+
 ![Página de cadastro de vídeos](./src/assets/img/img3.png)
 
 
@@ -53,7 +58,7 @@
   
   Local frontend port 3000 and 3001 at backend.
   
-## Contribuindo
+## Contribute
 
 1. Fork this repository (<https://github.com/EmanoellPasquet/Lemura/fork>)
 2. Create a new branch for the feature (`git checkout -b feature/fooBar`)
