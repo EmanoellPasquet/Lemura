@@ -12,10 +12,10 @@
   <br><br>
 </p>
  
- (./src/assets/img/img4.png)
- (./src/assets/img/img1.png)
- (./src/assets/img/img2.png)
- (./src/assets/img/img3.png)
+![Front-Page da aplicação] (./src/assets/img/img4.png)
+![Front-Page da aplicação] (./src/assets/img/img1.png)
+![Página de cadastro de categorias] (./src/assets/img/img2.png)
+![Página de cadastro de vídeos] (./src/assets/img/img3.png)
 
 # Index
 
@@ -34,11 +34,9 @@
 - [Concurrently](https://github.com/kimmobrunfeldt/concurrently)
 - [Styled-Components](https://github.com/styled-components/styled-components)
 - [Prop-Types](https://github.com/facebook/prop-types)
-- [Husky](https://github.com/typicode/husky)
-- [Typescript](https://www.typescriptlang.org)
 - [Eslint](https://www.npmjs.com/package/eslint)
 - [Storybook](https://www.npmjs.com/package/@storybook/react)
-- [Next.js](https://nextjs.org/)
+
 
 
 
