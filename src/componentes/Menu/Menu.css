@@ -57,15 +57,14 @@ z-index: 101;
 
 @media (max-width: 800px) {
  .Menu {
+   position: fixed;
    height: 40px;
    justify-content: space-between;
- }
- @media(max-width:500px){
-   .Menu{
      justify-content: center;
+     align-items: center;
    }
 
-   }
+   
    
  body {
    --bodyPaddingTop: 40px;

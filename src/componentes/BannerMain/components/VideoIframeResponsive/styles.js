@@ -7,7 +7,7 @@ export const VideoContainer = styled.div`
   padding-top: 50.25%;
   border: 2px solid #62d2f9;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   &:hover{
     transform:scale(110%);
 
@@ -22,9 +22,5 @@ export const ResponsiveIframe = styled.iframe`
   right: 0;
   width: 100%;
   height: 100%;
-  transition: 0.3s ease-in-out;
 
-  ${VideoContainer}:hover & {
-    transform: scale(1.07);
-  }
 `;
