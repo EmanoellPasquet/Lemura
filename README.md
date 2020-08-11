@@ -1,5 +1,5 @@
-#Lemura
-```
+# Lemura
+
 
 
  
@@ -11,6 +11,11 @@
     <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-%232A7AE4">
   <br><br>
 </p>
+ 
+ (./src/assets/img/img4.png)
+ (./src/assets/img/img1.png)
+ (./src/assets/img/img2.png)
+ (./src/assets/img/img3.png)
 
 # Index
 
@@ -47,6 +52,14 @@
   ```
   
   Local frontend port 3000 and 3001 at backend.
+  
+## Contribuindo
+
+1. For this repository (<https://github.com/EmanoellPasquet/Lemura/fork>)
+2. Create a new branch for the feature (`git checkout -b feature/fooBar`)
+3. Commit the changes (`git commit -am 'Add some fooBar'`)
+4. Push it to Github (`git push origin feature/fooBar`)
+5. Create a pull request and wait for revision
  
 ## :memo: License
 
