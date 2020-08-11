@@ -15,7 +15,7 @@
   <br><br>
 </p>
  
- <p align="center">An App inspired on Netflix for practice purposes based on Imersão React da [Alura](https://www.alura.com.br/)</p>
+ <p align="center">An App inspired on Netflix for practice purposes based on Imersão React da</p> [Alura](https://www.alura.com.br/)
  
  
 ![Front-Page da aplicação](./src/assets/img/img4.png)
