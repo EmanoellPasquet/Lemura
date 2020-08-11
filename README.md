@@ -7,12 +7,15 @@
   <a>
     <img alt="Made With React" src="https://img.shields.io/badge/Made%20With-REACT-%232A7AE4">
   </a>
+ <a>
+    <img alt="Alura" src="https://img.shields.io/badge/Alura-YES-%23232A7AE4">
+ </a>
   <a>
     <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-%232A7AE4">
   <br><br>
 </p>
  
- <p align="center">An App inspired on Netflix for study purposes based on Imersão React da [Alura](https://www.alura.com.br/)</p>
+ <p align="center">An App inspired on Netflix for practice purposes based on Imersão React da [Alura](https://www.alura.com.br/)</p>
  
  
 ![Front-Page da aplicação](./src/assets/img/img4.png)
